@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+//Solo support
 class SupportCharacters: NSObject {
     private var bloodType: Int
     private var height: Float
