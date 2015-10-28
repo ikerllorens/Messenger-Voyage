@@ -34,6 +34,11 @@ class GameMotor: NSObject {
         for(var i = 0; i < 300; ++i) {
             permutationTable.append(Float(arc4random_uniform(100)))
         }
+        let path = NSBundle.mainBundle().pathForResource("EventList", ofType: "plist")
+        let eventRoot: NSDictionary = NSDictionary(contentsOfFile: path!)!
+        for event in eventRoot {
+            print(event)
+        }
         //print(String(format: "%f", permutationTable[i]))
         🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
     }

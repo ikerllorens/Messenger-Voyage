@@ -2,18 +2,63 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>New item</key>
+	<key>EventTemplate</key>
 	<dict>
-		<key>New item</key>
+		<key>Title</key>
 		<string></string>
-		<key>New item - 2</key>
+		<key>Text</key>
 		<string></string>
-		<key>New item - 3</key>
+		<key>OptionA</key>
 		<string></string>
-		<key>New item - 4</key>
+		<key>OptionB</key>
 		<string></string>
-		<key>New item - 5</key>
+		<key>OptionC</key>
 		<string></string>
+		<key>OptionD</key>
+		<string></string>
+		<key>Nature</key>
+		<true/>
+		<key>SubEvents</key>
+		<dict/>
+	</dict>
+	<key>MildRain</key>
+	<dict>
+		<key>Title</key>
+		<string></string>
+		<key>Text</key>
+		<string></string>
+		<key>OptionA</key>
+		<string></string>
+		<key>OptionB</key>
+		<string></string>
+		<key>OptionC</key>
+		<string></string>
+		<key>OptionD</key>
+		<string></string>
+		<key>Nature</key>
+		<true/>
+		<key>SubEvents</key>
+		<dict>
+			<key>Cold</key>
+			<dict>
+				<key>Title</key>
+				<string>Cold!</string>
+				<key>Text</key>
+				<string>Your character catches flu</string>
+				<key>OptionA</key>
+				<string>Go on, he will recover on his own</string>
+				<key>OptionB</key>
+				<string>Give Medicine, - 1 Medic Pack</string>
+				<key>OptionC</key>
+				<string>Praise the mail gods</string>
+				<key>OptionD</key>
+				<string>Stop, until recovery</string>
+				<key>Nature</key>
+				<true/>
+				<key>SubEvents</key>
+				<dict/>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>
