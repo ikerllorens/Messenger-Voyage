@@ -12,8 +12,8 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         
     }
+    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        
     }
 }

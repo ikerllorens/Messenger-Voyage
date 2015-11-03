@@ -15,11 +15,13 @@ class SupportCharacters: NSObject {
     private var height: Float
     private var weight: Float
     private var BMI: Float
+    private var age: Int
     
-    init(BloodType: Int, Height: Float, Weight: Float) {
+    init(BloodType: Int, Height: Float, Weight: Float, Age: Int) {
         self.bloodType = BloodType
         self.height = Height
         self.weight = Weight
         self.BMI = weight/(height * height)
+        self.age = Age
     }
 }
