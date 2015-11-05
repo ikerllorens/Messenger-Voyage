@@ -2,7 +2,7 @@
 //  GameMotor.swift
 //  MessengerVoyage
 //
-//  Created by Iker on 26/10/15.
+//  Created by Iker on 31/10/15.
 //  Copyright © 2015 Scuigi Studios. All rights reserved.
 //
 
@@ -83,7 +83,7 @@ class GameMotor: NSObject {
             if(self.permutationTable[permutationTablePosition] < self.baseNegPosEventProb) {
                 self.moveTablePosition()
                 //Evento Positivo
-                
+    
                 //Idealmente 100, blindaje ante errores de suma
                 let sumPositiveSubtypesProb = self.probabilityDiscovery + self.probabilityClearWeather + self.probabilityMerchant + self.probabilityWildCardPos
                 let normalizedValue = self.permutationTable[permutationTablePosition] * (sumPositiveSubtypesProb/100)
