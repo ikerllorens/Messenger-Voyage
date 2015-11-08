@@ -16,7 +16,7 @@
 		912AD7381BCADDEC00A62255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912AD7361BCADDEC00A62255 /* LaunchScreen.storyboard */; };
 		912AD7431BCADDEC00A62255 /* MessengerVoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AD7421BCADDEC00A62255 /* MessengerVoyageTests.swift */; };
 		912AD74E1BCADDEC00A62255 /* MessengerVoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AD74D1BCADDEC00A62255 /* MessengerVoyageUITests.swift */; };
-		91ABF5651BE0433300D3CCE2 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABF5621BE0433300D3CCE2 /* Environment.swift */; };
+		91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */; };
 		91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91ABF5641BE0433300D3CCE2 /* EventList.plist */; };
 		91BFB41D1BDE7E6000D22D30 /* GameMotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */; };
 		91F318341BE9172D00066B44 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F318331BE9172D00066B44 /* EventHandler.swift */; };
@@ -55,7 +55,7 @@
 		912AD7491BCADDEC00A62255 /* MessengerVoyageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerVoyageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		912AD74D1BCADDEC00A62255 /* MessengerVoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerVoyageUITests.swift; sourceTree = "<group>"; };
 		912AD74F1BCADDEC00A62255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91ABF5621BE0433300D3CCE2 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Environment.swift; path = Classes/Environment.swift; sourceTree = "<group>"; };
+		91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentHandler.swift; path = Classes/EnvironmentHandler.swift; sourceTree = "<group>"; };
 		91ABF5641BE0433300D3CCE2 /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventList.plist; path = Classes/EventList.plist; sourceTree = "<group>"; };
 		91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMotor.swift; sourceTree = "<group>"; };
 		91F318331BE9172D00066B44 /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				91217BC21BCC055600E44EC1 /* SupportCharacters.swift */,
-				91ABF5621BE0433300D3CCE2 /* Environment.swift */,
+				91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */,
 				91F318331BE9172D00066B44 /* EventHandler.swift */,
 				91ABF5641BE0433300D3CCE2 /* EventList.plist */,
 			);
@@ -285,7 +285,7 @@
 			files = (
 				912AD72E1BCADDEB00A62255 /* GameScene.swift in Sources */,
 				91F318341BE9172D00066B44 /* EventHandler.swift in Sources */,
-				91ABF5651BE0433300D3CCE2 /* Environment.swift in Sources */,
+				91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */,
 				912AD7301BCADDEC00A62255 /* GameViewController.swift in Sources */,
 				912AD72A1BCADDEB00A62255 /* AppDelegate.swift in Sources */,
 				91BFB41D1BDE7E6000D22D30 /* GameMotor.swift in Sources */,

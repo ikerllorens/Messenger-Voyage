@@ -45,6 +45,11 @@ class GameMotor: NSObject {
     private var probabilityClearWeather: Double = 25
     private var probabilityWildCardPos: Double = 25
     
+    
+    //MARK: Handlers
+    //Objetos encargados de liberar carga al motor
+    private var eventHandler: EventHandler!
+    
     //MARK: Debug variable
     //TODO: Borrar
     var debugY = 0
@@ -68,111 +73,138 @@ class GameMotor: NSObject {
             permutationTable.append(Double(arc4random_uniform(101)))
         }
         let path = NSBundle.mainBundle().pathForResource("EventList", ofType: "plist")
+        self.eventHandler = EventHandler(motor: self)
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
         🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
     }
-
+    
     func pickEvent() {
         //self.moveTablePosition()
         if(self.permutationTable[permutationTablePosition] < self.baseProbabilityEvent) {
             //Sucedio Evento
-            self.moveTablePosition()
+            let queue = NSOperationQueue()
             
-            //Prob 50% 50% de evento + o -, prob se modifica por lo menos por el vehiculo y por el entorno y por otros eventos. Cambios ligero
-            if(self.permutationTable[permutationTablePosition] < self.baseNegPosEventProb) {
-                self.moveTablePosition()
-                //Evento Positivo
-    
-                //Idealmente 100, blindaje ante errores de suma
-                let sumPositiveSubtypesProb = self.probabilityDiscovery + self.probabilityClearWeather + self.probabilityMerchant + self.probabilityWildCardPos
-                let normalizedValue = self.permutationTable[permutationTablePosition] * (sumPositiveSubtypesProb/100)
-                var positiveEventSubtype: String?
-                
-                if ((normalizedValue >= 0) && (normalizedValue <= (0 + self.probabilityDiscovery))) {
-                    //W Variable
-                    positiveEventSubtype = "Discovery"
-                    debugEvW++
-                } else if ((normalizedValue > (0 + self.probabilityDiscovery)) && (normalizedValue <= (0 + self.probabilityDiscovery + self.probabilityMerchant))) {
-                    //X variable
-                    positiveEventSubtype = "Merchant"
-                    debugEvX++
-                } else if ((normalizedValue > (0 + self.probabilityDiscovery + self.probabilityMerchant)) && (normalizedValue <= (0 + self.probabilityDiscovery + self.probabilityMerchant + self.probabilityClearWeather))) {
-                    //Y variable
-                    positiveEventSubtype = "ClearWeather"
-                    debugEvY++
-                } else if ((normalizedValue > (0 + self.probabilityDiscovery + self.probabilityMerchant + self.probabilityClearWeather)) && (normalizedValue <= (0 + self.probabilityDiscovery + self.probabilityMerchant + self.probabilityClearWeather + self.probabilityWildCardPos))) {
-                    //Z variable
-                    positiveEventSubtype = "WildCardPos"
-                    debugEvZ++
-                } else {
-                    //TODO: Borrar impresion debug
-                    print("Error on event recognition")
-                    return
-                }
-                
-                let subcategoryEvent: NSArray = self.eventRootPositive!.objectForKey(positiveEventSubtype!) as! NSArray
-                let positiveEventIndex: Int = Int(arc4random_uniform(UInt32(subcategoryEvent.count)))
-                
-                if let eventPositive = subcategoryEvent[positiveEventIndex] as? NSDictionary {
-                    NSNotificationCenter.defaultCenter().postNotificationName("positiveEventOcurred", object: self, userInfo: eventPositive as [NSObject : AnyObject])
-                }
-                
-                debugPos++
-            } else {
-                //Evento negativo
+            queue.addOperationWithBlock() {
                 self.moveTablePosition()
                 
-                //Idealmente 100, blindaje ante errores de suma
-                let sumNegativeSubtypesProb = self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather + self.probabilityWildCardNeg
-                let normalizedValue = self.permutationTable[permutationTablePosition] * (sumNegativeSubtypesProb/100)
-                var negativeEventSubtype: String?
-                
-                if ((normalizedValue >= 0) && (normalizedValue <= (0 + self.probabilityAttack))) {
-                    //A Variable
-                    negativeEventSubtype = "Attack"
-                    debugEvA++
-                } else if ((normalizedValue > (0 + self.probabilityAttack)) && (normalizedValue <= (0 + self.probabilityAttack + self.probabilityFailure))) {
-                    //B variable
-                    negativeEventSubtype = "Failure"
-                    debugEvB++
-                } else if ((normalizedValue > (0 + self.probabilityAttack + self.probabilityFailure)) && (normalizedValue <= (0 + self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather))) {
-                    //C variable
-                    negativeEventSubtype = "BadWeather"
-                    debugEvC++
-                } else if ((normalizedValue > (0 + self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather)) && (normalizedValue <= (0 + self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather + self.probabilityWildCardNeg))) {
-                    //D variable
-                    negativeEventSubtype = "WildCardNeg"
-                    debugEvD++
+                //Prob 50% 50% de evento + o -, prob se modifica por lo menos por el vehiculo y por el entorno y por otros eventos. Cambios ligero
+                if(self.permutationTable[self.permutationTablePosition] < self.baseNegPosEventProb) {
+                    //Evento Positivo
+                    let queueForEventType = NSOperationQueue()
+                    queueForEventType.addOperationWithBlock() {
+                        
+                        self.moveTablePosition()
+                        //Idealmente 100, blindaje ante errores de suma
+                        let sumPositiveSubtypesProb = self.probabilityDiscovery + self.probabilityClearWeather + self.probabilityMerchant + self.probabilityWildCardPos
+                        let normalizedValue = self.permutationTable[self.permutationTablePosition] * (sumPositiveSubtypesProb/100)
+                        var positiveEventSubtype: String?
+                        
+                        if ((normalizedValue >= 0) && (normalizedValue <= (0 + self.probabilityDiscovery))) {
+                            //W Variable
+                            positiveEventSubtype = "Discovery"
+                            self.debugEvW++
+                        } else if ((normalizedValue > (0 + self.probabilityDiscovery)) && (normalizedValue <= (0 + self.probabilityDiscovery + self.probabilityMerchant))) {
+                            //X variable
+                            positiveEventSubtype = "Merchant"
+                            self.debugEvX++
+                        } else if ((normalizedValue > (0 + self.probabilityDiscovery + self.probabilityMerchant)) && (normalizedValue <= (0 + self.probabilityDiscovery + self.probabilityMerchant + self.probabilityClearWeather))) {
+                            //Y variable
+                            positiveEventSubtype = "ClearWeather"
+                            self.debugEvY++
+                        } else if ((normalizedValue > (0 + self.probabilityDiscovery + self.probabilityMerchant + self.probabilityClearWeather)) && (normalizedValue <= (0 + self.probabilityDiscovery + self.probabilityMerchant + self.probabilityClearWeather + self.probabilityWildCardPos))) {
+                            //Z variable
+                            positiveEventSubtype = "WildCardPos"
+                            self.debugEvZ++
+                        } else {
+                            //TODO: Borrar impresion debug
+                            print("Error on event recognition")
+                            return
+                        }
+                        
+                        let subcategoryEvent: NSArray = self.eventRootPositive!.objectForKey(positiveEventSubtype!) as! NSArray
+                        let positiveEventIndex: Int = Int(arc4random_uniform(UInt32(subcategoryEvent.count)))
+                        if(positiveEventIndex == 1) {
+                            print("1 seleccionado")
+                        }
+                        if let eventPositive = subcategoryEvent[positiveEventIndex] as? NSDictionary {
+                            NSNotificationCenter.defaultCenter().postNotificationName("positiveEventOcurred", object: self, userInfo: eventPositive as [NSObject : AnyObject])
+                        }
+                        
+                        self.debugPos++
+                    }
                 } else {
-                    //TODO: Borrar impresion debug
-                    print("Error on event recognition")
-                    return
+                    //Evento negativo
+                    
+                    let queueForEventType = NSOperationQueue()
+                    queueForEventType.addOperationWithBlock() {
+                        
+                        self.moveTablePosition()
+                        
+                        //Idealmente 100, blindaje ante errores de suma
+                        let sumNegativeSubtypesProb = self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather + self.probabilityWildCardNeg
+                        let normalizedValue = self.permutationTable[self.permutationTablePosition] * (sumNegativeSubtypesProb/100)
+                        var negativeEventSubtype: String?
+                        
+                        if ((normalizedValue >= 0) && (normalizedValue <= (0 + self.probabilityAttack))) {
+                            //A Variable
+                            negativeEventSubtype = "Attack"
+                            self.debugEvA++
+                        } else if ((normalizedValue > (0 + self.probabilityAttack)) && (normalizedValue <= (0 + self.probabilityAttack + self.probabilityFailure))) {
+                            //B variable
+                            negativeEventSubtype = "Failure"
+                            self.debugEvB++
+                        } else if ((normalizedValue > (0 + self.probabilityAttack + self.probabilityFailure)) && (normalizedValue <= (0 + self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather))) {
+                            //C variable
+                            negativeEventSubtype = "BadWeather"
+                            self.debugEvC++
+                        } else if ((normalizedValue > (0 + self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather)) && (normalizedValue <= (0 + self.probabilityAttack + self.probabilityFailure + self.probabilityBadWeather + self.probabilityWildCardNeg))) {
+                            //D variable
+                            negativeEventSubtype = "WildCardNeg"
+                            self.debugEvD++
+                        } else {
+                            //TODO: Borrar impresion debug
+                            print("Error on event recognition")
+                            return
+                        }
+                        
+                        let subcategoryEvent: NSArray = self.eventRootNegative!.objectForKey(negativeEventSubtype!) as! NSArray
+                        let negativeEventIndex: Int = Int(arc4random_uniform(UInt32(subcategoryEvent.count)))
+                        
+                        if let eventNegative = subcategoryEvent[negativeEventIndex] as? NSDictionary {
+                            NSNotificationCenter.defaultCenter().postNotificationName("negativeEventOcurred", object: self, userInfo: eventNegative as [NSObject : AnyObject])
+                        }
+                        //                //print("Negative")
+                        self.debugNeg++
+                    }
                 }
                 
-                let subcategoryEvent: NSArray = self.eventRootNegative!.objectForKey(negativeEventSubtype!) as! NSArray
-                let negativeEventIndex: Int = Int(arc4random_uniform(UInt32(subcategoryEvent.count)))
-                
-                if let eventNegative = subcategoryEvent[negativeEventIndex] as? NSDictionary {
-                    NSNotificationCenter.defaultCenter().postNotificationName("negativeEventOcurred", object: self, userInfo: eventNegative as [NSObject : AnyObject])
-                }
-//                //print("Negative")
-                debugNeg++
+                self.moveTablePosition()
+                self.debugY++
             }
-            
-            self.moveTablePosition()
-            debugY++
         } else {
             //No sucedio evento
             self.moveTablePosition()
             debugN++
         }
         self.animationCycle++
-        if(self.animationCycle >= 7000) {
+        if(self.animationCycle >= 1000) {
             self.pauseTimer()
         }
     }
     
+    func alterMotor(parameter: String, value: Double) {
+        switch (parameter) {
+        case "modifyBaseProbability":
+            if (self.baseProbabilityEvent <= 100) {
+                self.baseProbabilityEvent = self.baseProbabilityEvent * value
+            }
+            break
+        default:
+            print("invalid parameter")
+            break
+        }
+    }
     
     func pauseTimer() {
         self.🕑?.invalidate()
@@ -180,7 +212,7 @@ class GameMotor: NSObject {
         print("+: ", debugPos, " -: ", debugNeg)
         print("W: ", debugEvW, " X: ", debugEvX, " Y: ", debugEvY, " Z: ", debugEvZ)
         print("A: ", debugEvA, " B: ", debugEvB, " C: ", debugEvC, " D: ", debugEvD)
-
+        print("ProbBase: ", self.baseProbabilityEvent)
     }
     
     private func moveTablePosition() {

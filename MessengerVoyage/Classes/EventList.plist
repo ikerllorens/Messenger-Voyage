@@ -6,8 +6,54 @@
 		<key>Discovery</key>
 		<array>
 			<dict>
+				<key>InmediateEffects</key>
+				<dict>
+					<key>modifyBaseProbability</key>
+					<real>0.7</real>
+				</dict>
 				<key>Title</key>
 				<string>TemplatePositiveDiscovery</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+					<key>Health</key>
+					<integer>0</integer>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+					<key>Health</key>
+					<integer>0</integer>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+					<key>Health</key>
+					<integer>0</integer>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+					<key>Health</key>
+					<integer>0</integer>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict>
+					<key>modifyBaseProbability</key>
+					<real>0.7</real>
+				</dict>
+				<key>Title</key>
+				<string>DummyEvent</string>
 				<key>Text</key>
 				<string>Event </string>
 				<key>OptionA</key>
@@ -45,6 +91,11 @@
 		<key>ClearWeather</key>
 		<array>
 			<dict>
+				<key>InmediateEffects</key>
+				<dict>
+					<key>modifyBaseProbability</key>
+					<real>0.7</real>
+				</dict>
 				<key>Title</key>
 				<string>TemplatePositiveWeather</string>
 				<key>Text</key>
@@ -84,6 +135,11 @@
 		<key>Merchant</key>
 		<array>
 			<dict>
+				<key>InmediateEffects</key>
+				<dict>
+					<key>modifyBaseProbability</key>
+					<real>0.7</real>
+				</dict>
 				<key>Title</key>
 				<string>TemplatePositiveMerch</string>
 				<key>Text</key>
@@ -123,6 +179,11 @@
 		<key>WildCardPos</key>
 		<array>
 			<dict>
+				<key>InmediateEffects</key>
+				<dict>
+					<key>modifyBaseProbability</key>
+					<real>0.7</real>
+				</dict>
 				<key>Title</key>
 				<string>TemplatePositiveWild</string>
 				<key>Text</key>
@@ -165,7 +226,7 @@
 		<array>
 			<dict>
 				<key>Title</key>
-				<string>Attack</string>
+				<string>TemplateNegativeAttack</string>
 				<key>Text</key>
 				<string>Event </string>
 				<key>OptionA</key>
@@ -204,7 +265,7 @@
 		<array>
 			<dict>
 				<key>Title</key>
-				<string>Failure</string>
+				<string>TemplateNegativeFailure</string>
 				<key>Text</key>
 				<string>Event </string>
 				<key>OptionA</key>
@@ -243,7 +304,7 @@
 		<array>
 			<dict>
 				<key>Title</key>
-				<string>BadWeather</string>
+				<string>TemplateNegativeBadWeather</string>
 				<key>Text</key>
 				<string>Event </string>
 				<key>OptionA</key>
@@ -282,7 +343,7 @@
 		<array>
 			<dict>
 				<key>Title</key>
-				<string>WildCardNeg</string>
+				<string>TemplateNegativeWildCardNeg</string>
 				<key>Text</key>
 				<string>Event </string>
 				<key>OptionA</key>
