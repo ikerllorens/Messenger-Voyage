@@ -19,7 +19,7 @@ class GameMotor: NSObject {
     private var permutationTable: [Double] = []
     private var permutationTablePosition: Int = 0
     private var temporalValues: Double = 0
-    private var baseTime: Double = 0.001
+    private var baseTime: Double = 0.0001
     private var 🕑: NSTimer?
     
     //Si es mayor habra mas eventos, si es menor habra menos eventos
@@ -49,6 +49,7 @@ class GameMotor: NSObject {
     //MARK: Handlers
     //Objetos encargados de liberar carga al motor
     private var eventHandler: EventHandler!
+    private var environmentHandler: EnvironmentHandler!
     
     //MARK: Debug variable
     //TODO: Borrar
@@ -74,6 +75,7 @@ class GameMotor: NSObject {
         }
         let path = NSBundle.mainBundle().pathForResource("EventList", ofType: "plist")
         self.eventHandler = EventHandler(motor: self)
+        self.environmentHandler = EnvironmentHandler(motor: self)
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
         🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
@@ -84,7 +86,6 @@ class GameMotor: NSObject {
         if(self.permutationTable[permutationTablePosition] < self.baseProbabilityEvent) {
             //Sucedio Evento
             let queue = NSOperationQueue()
-            
             queue.addOperationWithBlock() {
                 self.moveTablePosition()
                 
@@ -124,9 +125,6 @@ class GameMotor: NSObject {
                         
                         let subcategoryEvent: NSArray = self.eventRootPositive!.objectForKey(positiveEventSubtype!) as! NSArray
                         let positiveEventIndex: Int = Int(arc4random_uniform(UInt32(subcategoryEvent.count)))
-                        if(positiveEventIndex == 1) {
-                            print("1 seleccionado")
-                        }
                         if let eventPositive = subcategoryEvent[positiveEventIndex] as? NSDictionary {
                             NSNotificationCenter.defaultCenter().postNotificationName("positiveEventOcurred", object: self, userInfo: eventPositive as [NSObject : AnyObject])
                         }
