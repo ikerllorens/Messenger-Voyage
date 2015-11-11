@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Thug</key>
+	<dict>
+		<key>Arnolden Saussage</key>
+		<dict>
+			<key>BloodType</key>
+			<integer>0</integer>
+			<key>Weight</key>
+			<integer>113</integer>
+			<key>Height</key>
+			<integer>188</integer>
+			<key>Age</key>
+			<integer>35</integer>
+			<key>Buffs</key>
+			<dict/>
+		</dict>
+	</dict>
+</dict>
+</plist>

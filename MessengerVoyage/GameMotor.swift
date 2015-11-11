@@ -78,6 +78,7 @@ class GameMotor: NSObject {
         self.environmentHandler = EnvironmentHandler(motor: self)
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
+        _ = SupportCharacters.init(characterClass: "Thug", characterName: "Arnolden Saussage")
         🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
     }
     
@@ -191,15 +192,17 @@ class GameMotor: NSObject {
         }
     }
     
+    //TODO: Eliminar
     func alterMotor(parameter: String, value: Double) {
         switch (parameter) {
         case "modifyBaseProbability":
+            print("baseProbModified")
             if (self.baseProbabilityEvent <= 100) {
                 self.baseProbabilityEvent = self.baseProbabilityEvent * value
             }
             break
         default:
-            print("invalid parameter")
+            print("invalid parameter:", parameter)
             break
         }
     }

@@ -19,7 +19,7 @@ class EnvironmentHandler: NSObject {
         //Tomar un entorno aleatorio del plist y su arte
         let path = NSBundle.mainBundle().pathForResource("EnvironmentList", ofType: "plist")
         self.currentEnvironment = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
-        print(self.currentEnvironment.objectForKey("Name"),"!")
+        print(self.currentEnvironment.objectForKey("Name")!,"!")
         self.environmentMotorChanges()
     }
     

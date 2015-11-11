@@ -13,8 +13,8 @@
 		<string>Desert</string>
 		<key>Modifiers</key>
 		<dict>
-			<key>modifyBaseProbability</key>
-			<integer>2</integer>
+			<key>modifyGameCycles</key>
+			<real>1.3</real>
 		</dict>
 	</dict>
 </array>
