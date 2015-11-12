@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
+<dict>
+	<key>EnvironmentTemplate</key>
 	<dict>
 		<key>Name</key>
 		<string>EnvironmentTemplate</string>
 		<key>Modifiers</key>
 		<dict/>
 	</dict>
+	<key>Desert</key>
 	<dict>
 		<key>Name</key>
 		<string>Desert</string>
@@ -17,5 +19,5 @@
 			<real>1.3</real>
 		</dict>
 	</dict>
-</array>
+</dict>
 </plist>

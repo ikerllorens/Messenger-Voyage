@@ -12,13 +12,13 @@ class EnvironmentHandler: NSObject {
     private var motor: GameMotor!
     private var currentEnvironment: NSDictionary!
     
-    init(motor: GameMotor) {
+    init(motor: GameMotor, startEnvironment: String) {
         super.init()
         self.motor = motor
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeEnvironment:", name: "environmentChange", object: motor)
         //Tomar un entorno aleatorio del plist y su arte
         let path = NSBundle.mainBundle().pathForResource("EnvironmentList", ofType: "plist")
-        self.currentEnvironment = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
+        self.currentEnvironment = NSDictionary.init(contentsOfFile: path!)?.objectForKey(startEnvironment) as! NSDictionary
         print(self.currentEnvironment.objectForKey("Name")!,"!")
         self.environmentMotorChanges()
     }
@@ -28,7 +28,6 @@ class EnvironmentHandler: NSObject {
     }
     
     func environmentMotorChanges() {
-        
         if let modifiers = currentEnvironment.objectForKey("Modifiers") as? NSDictionary {
             let queueEnvironment = NSOperationQueue()
             queueEnvironment.addOperationWithBlock() {

@@ -9,12 +9,23 @@
 import UIKit
 
 class SupportCharactersHandler: NSObject {
-    private var characters: [SupportCharacters]!
+    private var characters: [SupportCharacters] = []
+    private var motor: GameMotor!
     
-    init(selectedCharacters: NSDictionary) {
+    init(selectedCharacters: NSDictionary, motor: GameMotor) {
         super.init()
-        for selectedCh in selectedCharacters {
-            characters.append(selectedCh as! SupportCharacters)
+        self.motor =  motor
+        for selectedCh in selectedCharacters.allKeys {
+            if let charInfo = selectedCharacters.objectForKey(selectedCh) as? NSDictionary {
+                characters.append(SupportCharacters(characterClass: charInfo.objectForKey("Class") as! String, characterName: charInfo.objectForKey("Name") as! String))
+                for buff in (self.characters.last?.buffs.allKeys)! {
+                    self.motor.alterMotor(buff as! String, value: self.characters.last?.buffs.objectForKey(buff) as! Double)
+                }
+            }
         }
+    }
+    
+    func reduceHealthBy(healthDecreas: Double) {
+        
     }
 }

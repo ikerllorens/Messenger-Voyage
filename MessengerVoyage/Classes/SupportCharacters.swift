@@ -16,12 +16,14 @@ class SupportCharacters: NSObject {
     private var weight: Double!
     private var stamina: Double!
     private var age: Double!
+    private var name: String!
     var buffs: NSDictionary!
     
     init(characterClass: String, characterName: String) {
         let path = NSBundle.mainBundle().pathForResource("SupportCharactersList", ofType: "plist")
         if let classArray = NSDictionary(contentsOfFile: path!)?.objectForKey(characterClass) as? NSDictionary {
             if let character = classArray.objectForKey(characterName) as? NSDictionary {
+                self.name = character.objectForKey("Name") as! String
                 self.bloodType = character.objectForKey("BloodType") as! Int
                 self.height = character.objectForKey("Height") as! Double
                 self.weight = character.objectForKey("Weight") as! Double

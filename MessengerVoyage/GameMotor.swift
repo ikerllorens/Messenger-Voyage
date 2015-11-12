@@ -50,6 +50,8 @@ class GameMotor: NSObject {
     //Objetos encargados de liberar carga al motor
     private var eventHandler: EventHandler!
     private var environmentHandler: EnvironmentHandler!
+    private var supportCharactersHandler: SupportCharactersHandler!
+    private var vehicleHandler: VehicleHandler!
     
     //MARK: Debug variable
     //TODO: Borrar
@@ -75,10 +77,12 @@ class GameMotor: NSObject {
         }
         let path = NSBundle.mainBundle().pathForResource("EventList", ofType: "plist")
         self.eventHandler = EventHandler(motor: self)
-        self.environmentHandler = EnvironmentHandler(motor: self)
+        self.environmentHandler = EnvironmentHandler(motor: self, startEnvironment: "Desert")
+        self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: ["character1": ["Class":"Thug", "Name":"Arnolden Saussage"]], motor: self) //cambiar selectedCharacters
+        self.vehicleHandler = VehicleHandler(motor: self, selectedVehicle: "VehicleTemplate") //cambiar selectedVehicle
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
-        _ = SupportCharacters.init(characterClass: "Thug", characterName: "Arnolden Saussage")
+        //_ = SupportCharacters.init(characterClass: "Thug", characterName: "Arnolden Saussage")
         🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
     }
     
@@ -196,7 +200,7 @@ class GameMotor: NSObject {
     func alterMotor(parameter: String, value: Double) {
         switch (parameter) {
         case "modifyBaseProbability":
-            print("baseProbModified")
+            print("baseProbabilityModified")
             if (self.baseProbabilityEvent <= 100) {
                 self.baseProbabilityEvent = self.baseProbabilityEvent * value
             }

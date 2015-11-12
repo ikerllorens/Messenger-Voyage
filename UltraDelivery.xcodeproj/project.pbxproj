@@ -24,6 +24,8 @@
 		91AFD9C11BF0F53100016744 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AFD9C01BF0F53100016744 /* HealthKit.framework */; };
 		91BFB41D1BDE7E6000D22D30 /* GameMotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */; };
 		91F318341BE9172D00066B44 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F318331BE9172D00066B44 /* EventHandler.swift */; };
+		91F992B51BF3CD5A00D6C1B4 /* VehicleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */; };
+		91F992B71BF3CEE000D6C1B4 /* VehicleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F992B61BF3CEE000D6C1B4 /* VehicleHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		91AFD9C01BF0F53100016744 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMotor.swift; sourceTree = "<group>"; };
 		91F318331BE9172D00066B44 /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
+		91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VehicleList.plist; sourceTree = "<group>"; };
+		91F992B61BF3CEE000D6C1B4 /* VehicleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleHandler.swift; path = Classes/VehicleHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		91217BC41BCC056100E44EC1 /* CLASSES */ = {
 			isa = PBXGroup;
 			children = (
+				91F992B61BF3CEE000D6C1B4 /* VehicleHandler.swift */,
+				91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */,
 				91217BC21BCC055600E44EC1 /* SupportCharacters.swift */,
 				9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */,
 				91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */,
@@ -276,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912AD7381BCADDEC00A62255 /* LaunchScreen.storyboard in Resources */,
+				91F992B51BF3CD5A00D6C1B4 /* VehicleList.plist in Resources */,
 				912AD7351BCADDEC00A62255 /* Assets.xcassets in Resources */,
 				91A22C2C1BF29B1A00760496 /* SupportCharactersList.plist in Resources */,
 				912AD7331BCADDEC00A62255 /* Main.storyboard in Resources */,
@@ -306,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912AD72E1BCADDEB00A62255 /* GameScene.swift in Sources */,
+				91F992B71BF3CEE000D6C1B4 /* VehicleHandler.swift in Sources */,
 				91F318341BE9172D00066B44 /* EventHandler.swift in Sources */,
 				91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */,
 				912AD7301BCADDEC00A62255 /* GameViewController.swift in Sources */,
