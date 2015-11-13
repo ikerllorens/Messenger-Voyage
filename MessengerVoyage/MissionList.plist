@@ -8,7 +8,9 @@
 			<key>Title</key>
 			<string>Pu</string>
 			<key>Description</key>
-			<string></string>
+			<string>Mission Description
+Ultra Classified:
+You must go to the other side of the planet</string>
 			<key>StartEnvironent</key>
 			<string>Desert</string>
 			<key>Modifiers</key>

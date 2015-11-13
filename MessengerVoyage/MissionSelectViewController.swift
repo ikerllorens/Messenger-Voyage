@@ -9,14 +9,13 @@
 import UIKit
 
 class MissionSelectViewController: UIViewController {
-    @IBOutlet var tableHistory: UITableView!
+    @IBOutlet weak var missionInfoView: UIView!
+    @IBOutlet weak var missionsTable: UITableView!
+    @IBOutlet weak var closeMissionInfo: UIButton!
+    @IBOutlet weak var missionInfoTitle: UILabel!
+    @IBOutlet weak var missionInfoDescription: UITextView!
+    
     let sections =  ["Easy", "Medium", "Hard", "Insane"]
-//    var missions: Dictionary<String, Array<NSDictionary>> = [
-//        "Easy": [],
-//        "Medium": [],
-//        "Hard": [],
-//        "Insane": []
-//    ]
     var missions: Array<Array<NSDictionary>> = [
         [],
         [],
@@ -26,6 +25,7 @@ class MissionSelectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.missionInfoView.hidden = true
         let path = NSBundle.mainBundle().pathForResource("MissionList", ofType: "plist")
         let allMissions = NSDictionary.init(contentsOfFile: path!)! as NSDictionary
         for easyMissions in allMissions.objectForKey("Easy") as! Array<AnyObject> {
@@ -41,7 +41,7 @@ class MissionSelectViewController: UIViewController {
             self.missions[3].append(insaneMissions as! NSDictionary)
         }
 
-        self.tableHistory.reloadData()
+        self.missionsTable.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -65,15 +65,36 @@ class MissionSelectViewController: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("missionCell", forIndexPath: indexPath) as! MissionTableViewCell
         
-        //let sectionString = sections[indexPath.section]
         let mission = self.missions[indexPath.section]
-        
         cell.textLabel?.text = mission[indexPath.row].objectForKey("Title") as? String
         cell.cellInfo = mission[indexPath.row]
-//        cell.detailTextLabel?.text = data[sectionString]![indexPath.row].getScore() + "\n" + data[sectionString]![indexPath.row].getDate()
+
         return cell
     }
     
+    /**
+     Metodo llamado cuando el usuario presiona el boton de mas informacion en la tabla de seleccion de misiones
+     
+     - parameter tableView:                                tabla
+     - parameter accessoryButtonTappedForRowWithIndexPath: Indice del boton al que se le dio click
+     */
+    func tableView(tableView:UITableView, accessoryButtonTappedForRowWithIndexPath: NSIndexPath) {
+        print((self.missionsTable.cellForRowAtIndexPath(accessoryButtonTappedForRowWithIndexPath) as! MissionTableViewCell).cellInfo)
+        self.missionInfoView.hidden = false
+        self.missionInfoTitle.text = (self.missionsTable.cellForRowAtIndexPath(accessoryButtonTappedForRowWithIndexPath) as! MissionTableViewCell).cellInfo.objectForKey("Title") as? String
+        self.missionInfoTitle.sizeToFit()
+        self.missionInfoDescription.text = (self.missionsTable.cellForRowAtIndexPath(accessoryButtonTappedForRowWithIndexPath) as! MissionTableViewCell).cellInfo.objectForKey("Description") as? String
+        UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.missionInfoView.alpha = 0.95
+        }, completion: {(completed) in  self.missionInfoView.hidden = false})
+    }
+    
+    
+    @IBAction func dismissInfoView(sender: UIButton) {
+        UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.missionInfoView.alpha = 0.0
+        }, completion: {(completed) in  self.missionInfoView.hidden = true})
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

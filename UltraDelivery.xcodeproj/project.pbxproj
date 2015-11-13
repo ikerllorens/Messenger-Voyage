@@ -23,6 +23,7 @@
 		912BBD3C1BF56BF3004B7939 /* MissionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD3B1BF56BF3004B7939 /* MissionList.plist */; };
 		912BBD3E1BF57F52004B7939 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */; };
 		912BBD401BF62881004B7939 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */; };
+		912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */; };
 		913B5D831BF516B400A70E6A /* StartScreenScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 913B5D821BF516B400A70E6A /* StartScreenScene.sks */; };
 		913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B5DC41BF554FE00A70E6A /* MainViewController.swift */; };
 		9181346F1BF2C21000C33570 /* SupportCharactersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */; };
@@ -56,7 +57,7 @@
 /* Begin PBXFileReference section */
 		9112E0871BEF096700905F58 /* EnvironmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnvironmentList.plist; sourceTree = "<group>"; };
 		91217BC21BCC055600E44EC1 /* SupportCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportCharacters.swift; path = Classes/SupportCharacters.swift; sourceTree = "<group>"; };
-		912AD7261BCADDEB00A62255 /* MessengerVoyage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerVoyage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		912AD7261BCADDEB00A62255 /* Ultra Delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultra Delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		912AD7291BCADDEB00A62255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912AD72D1BCADDEB00A62255 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		912AD72F1BCADDEC00A62255 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		912BBD3B1BF56BF3004B7939 /* MissionList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MissionList.plist; sourceTree = "<group>"; };
 		912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
 		912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Very-Basic-Close-icon.png"; sourceTree = "<group>"; };
 		913B5D821BF516B400A70E6A /* StartScreenScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScreenScene.sks; sourceTree = "<group>"; };
 		913B5DC41BF554FE00A70E6A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportCharactersHandler.swift; path = Classes/SupportCharactersHandler.swift; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 		912AD7271BCADDEB00A62255 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				912AD7261BCADDEB00A62255 /* MessengerVoyage.app */,
+				912AD7261BCADDEB00A62255 /* Ultra Delivery.app */,
 				912AD73E1BCADDEC00A62255 /* MessengerVoyageTests.xctest */,
 				912AD7491BCADDEC00A62255 /* MessengerVoyageUITests.xctest */,
 			);
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				913B5D821BF516B400A70E6A /* StartScreenScene.sks */,
+				912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */,
 				912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */,
 			);
 			name = ASSETS;
@@ -245,7 +248,7 @@
 			);
 			name = MessengerVoyage;
 			productName = MessengerVoyage;
-			productReference = 912AD7261BCADDEB00A62255 /* MessengerVoyage.app */;
+			productReference = 912AD7261BCADDEB00A62255 /* Ultra Delivery.app */;
 			productType = "com.apple.product-type.application";
 		};
 		912AD73D1BCADDEC00A62255 /* MessengerVoyageTests */ = {
@@ -347,6 +350,7 @@
 				9112E0881BEF096700905F58 /* EnvironmentList.plist in Resources */,
 				91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */,
 				913B5D831BF516B400A70E6A /* StartScreenScene.sks in Resources */,
+				912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +536,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ScuigiStudios.UltraDelivery;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ultra Delivery";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -548,7 +552,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ScuigiStudios.UltraDelivery;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Ultra Delivery";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
