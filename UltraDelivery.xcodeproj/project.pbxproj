@@ -116,20 +116,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		91217BC41BCC056100E44EC1 /* CLASSES */ = {
+		91217BC41BCC056100E44EC1 /* HANDLERS */ = {
 			isa = PBXGroup;
 			children = (
 				91F992B61BF3CEE000D6C1B4 /* VehicleHandler.swift */,
-				91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */,
 				91217BC21BCC055600E44EC1 /* SupportCharacters.swift */,
 				9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */,
-				91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */,
 				91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */,
-				9112E0871BEF096700905F58 /* EnvironmentList.plist */,
 				91F318331BE9172D00066B44 /* EventHandler.swift */,
-				91ABF5641BE0433300D3CCE2 /* EventList.plist */,
 			);
-			name = CLASSES;
+			name = HANDLERS;
 			sourceTree = "<group>";
 		};
 		912AD71D1BCADDEB00A62255 = {
@@ -156,22 +152,16 @@
 		912AD7281BCADDEB00A62255 /* MessengerVoyage */ = {
 			isa = PBXGroup;
 			children = (
+				912BBD411BF62C92004B7939 /* ASSETS */,
+				91217BC41BCC056100E44EC1 /* HANDLERS */,
+				912BBD431BF62D11004B7939 /* CONTROLLERS */,
+				912BBD421BF62CA4004B7939 /* GAME_PLISTS */,
+				912BBD441BF62D34004B7939 /* VIEWS */,
 				91AFD9BF1BF0F53000016744 /* MessengerVoyage.entitlements */,
-				91217BC41BCC056100E44EC1 /* CLASSES */,
 				912AD7291BCADDEB00A62255 /* AppDelegate.swift */,
 				91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */,
-				912AD72D1BCADDEB00A62255 /* GameScene.swift */,
-				913B5DC41BF554FE00A70E6A /* MainViewController.swift */,
-				913B5D821BF516B400A70E6A /* StartScreenScene.sks */,
-				912AD72F1BCADDEC00A62255 /* GameViewController.swift */,
-				912AD7311BCADDEC00A62255 /* Main.storyboard */,
-				912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */,
-				912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */,
-				912BBD371BF5655F004B7939 /* MissionSelectViewController.swift */,
-				912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */,
-				912BBD3B1BF56BF3004B7939 /* MissionList.plist */,
-				912BBD351BF5629C004B7939 /* VehicleSelectViewController.swift */,
 				912AD7341BCADDEC00A62255 /* Assets.xcassets */,
+				912AD7311BCADDEC00A62255 /* Main.storyboard */,
 				912AD7361BCADDEC00A62255 /* LaunchScreen.storyboard */,
 				912AD7391BCADDEC00A62255 /* Info.plist */,
 			);
@@ -194,6 +184,48 @@
 				912AD74F1BCADDEC00A62255 /* Info.plist */,
 			);
 			path = MessengerVoyageUITests;
+			sourceTree = "<group>";
+		};
+		912BBD411BF62C92004B7939 /* ASSETS */ = {
+			isa = PBXGroup;
+			children = (
+				913B5D821BF516B400A70E6A /* StartScreenScene.sks */,
+				912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */,
+			);
+			name = ASSETS;
+			sourceTree = "<group>";
+		};
+		912BBD421BF62CA4004B7939 /* GAME_PLISTS */ = {
+			isa = PBXGroup;
+			children = (
+				91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */,
+				91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */,
+				9112E0871BEF096700905F58 /* EnvironmentList.plist */,
+				91ABF5641BE0433300D3CCE2 /* EventList.plist */,
+				912BBD3B1BF56BF3004B7939 /* MissionList.plist */,
+			);
+			name = GAME_PLISTS;
+			sourceTree = "<group>";
+		};
+		912BBD431BF62D11004B7939 /* CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				913B5DC41BF554FE00A70E6A /* MainViewController.swift */,
+				912AD72F1BCADDEC00A62255 /* GameViewController.swift */,
+				912BBD371BF5655F004B7939 /* MissionSelectViewController.swift */,
+				912BBD351BF5629C004B7939 /* VehicleSelectViewController.swift */,
+			);
+			name = CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		912BBD441BF62D34004B7939 /* VIEWS */ = {
+			isa = PBXGroup;
+			children = (
+				912AD72D1BCADDEB00A62255 /* GameScene.swift */,
+				912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */,
+				912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */,
+			);
+			name = VIEWS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,7 +525,6 @@
 		912AD7531BCADDEC00A62255 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MessengerVoyage/MessengerVoyage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -510,7 +541,6 @@
 		912AD7541BCADDEC00A62255 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MessengerVoyage/MessengerVoyage.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
