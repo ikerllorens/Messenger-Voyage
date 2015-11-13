@@ -9,10 +9,7 @@
 		<key>Fuel</key>
 		<integer>0</integer>
 		<key>Buffs</key>
-		<dict>
-			<key>modifyBaseProbability</key>
-			<integer>3</integer>
-		</dict>
+		<dict/>
 	</dict>
 </dict>
 </plist>

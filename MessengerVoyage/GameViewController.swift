@@ -12,8 +12,10 @@ import SpriteKit
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
-        _ = GameMotor()
         super.viewDidLoad()
+        let skView = self.view as! SKView
+        let gameScene = GameScene(fileNamed: "StartScreenScene")
+        skView.presentScene(gameScene)
     }
 
 //    override func shouldAutorotate() -> Bool {
@@ -27,8 +29,6 @@ class GameViewController: UIViewController {
 ////            return .All
 ////        }
 //    }
-
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

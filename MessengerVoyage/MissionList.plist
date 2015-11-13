@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Easy</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Pu</string>
+			<key>Description</key>
+			<string></string>
+			<key>StartEnvironent</key>
+			<string>Desert</string>
+			<key>Modifiers</key>
+			<dict/>
+		</dict>
+	</array>
+	<key>Medium</key>
+	<array/>
+	<key>Hard</key>
+	<array/>
+	<key>Insane</key>
+	<array/>
+</dict>
+</plist>

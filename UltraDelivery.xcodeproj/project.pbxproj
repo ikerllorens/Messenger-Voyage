@@ -17,6 +17,14 @@
 		912AD7381BCADDEC00A62255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912AD7361BCADDEC00A62255 /* LaunchScreen.storyboard */; };
 		912AD7431BCADDEC00A62255 /* MessengerVoyageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AD7421BCADDEC00A62255 /* MessengerVoyageTests.swift */; };
 		912AD74E1BCADDEC00A62255 /* MessengerVoyageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912AD74D1BCADDEC00A62255 /* MessengerVoyageUITests.swift */; };
+		912BBD361BF5629C004B7939 /* VehicleSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD351BF5629C004B7939 /* VehicleSelectViewController.swift */; };
+		912BBD381BF5655F004B7939 /* MissionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD371BF5655F004B7939 /* MissionSelectViewController.swift */; };
+		912BBD3A1BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */; };
+		912BBD3C1BF56BF3004B7939 /* MissionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD3B1BF56BF3004B7939 /* MissionList.plist */; };
+		912BBD3E1BF57F52004B7939 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */; };
+		912BBD401BF62881004B7939 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */; };
+		913B5D831BF516B400A70E6A /* StartScreenScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 913B5D821BF516B400A70E6A /* StartScreenScene.sks */; };
+		913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B5DC41BF554FE00A70E6A /* MainViewController.swift */; };
 		9181346F1BF2C21000C33570 /* SupportCharactersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */; };
 		91A22C2C1BF29B1A00760496 /* SupportCharactersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */; };
 		91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */; };
@@ -62,6 +70,14 @@
 		912AD7491BCADDEC00A62255 /* MessengerVoyageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerVoyageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		912AD74D1BCADDEC00A62255 /* MessengerVoyageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerVoyageUITests.swift; sourceTree = "<group>"; };
 		912AD74F1BCADDEC00A62255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912BBD351BF5629C004B7939 /* VehicleSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleSelectViewController.swift; sourceTree = "<group>"; };
+		912BBD371BF5655F004B7939 /* MissionSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionSelectViewController.swift; sourceTree = "<group>"; };
+		912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg"; sourceTree = "<group>"; };
+		912BBD3B1BF56BF3004B7939 /* MissionList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MissionList.plist; sourceTree = "<group>"; };
+		912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
+		912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		913B5D821BF516B400A70E6A /* StartScreenScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScreenScene.sks; sourceTree = "<group>"; };
+		913B5DC41BF554FE00A70E6A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportCharactersHandler.swift; path = Classes/SupportCharactersHandler.swift; sourceTree = "<group>"; };
 		91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SupportCharactersList.plist; sourceTree = "<group>"; };
 		91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentHandler.swift; path = Classes/EnvironmentHandler.swift; sourceTree = "<group>"; };
@@ -145,8 +161,16 @@
 				912AD7291BCADDEB00A62255 /* AppDelegate.swift */,
 				91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */,
 				912AD72D1BCADDEB00A62255 /* GameScene.swift */,
+				913B5DC41BF554FE00A70E6A /* MainViewController.swift */,
+				913B5D821BF516B400A70E6A /* StartScreenScene.sks */,
 				912AD72F1BCADDEC00A62255 /* GameViewController.swift */,
 				912AD7311BCADDEC00A62255 /* Main.storyboard */,
+				912BBD3F1BF62881004B7939 /* CharacterCollectionViewCell.swift */,
+				912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */,
+				912BBD371BF5655F004B7939 /* MissionSelectViewController.swift */,
+				912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */,
+				912BBD3B1BF56BF3004B7939 /* MissionList.plist */,
+				912BBD351BF5629C004B7939 /* VehicleSelectViewController.swift */,
 				912AD7341BCADDEC00A62255 /* Assets.xcassets */,
 				912AD7361BCADDEC00A62255 /* LaunchScreen.storyboard */,
 				912AD7391BCADDEC00A62255 /* Info.plist */,
@@ -281,13 +305,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912BBD3A1BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg in Resources */,
 				912AD7381BCADDEC00A62255 /* LaunchScreen.storyboard in Resources */,
 				91F992B51BF3CD5A00D6C1B4 /* VehicleList.plist in Resources */,
 				912AD7351BCADDEC00A62255 /* Assets.xcassets in Resources */,
 				91A22C2C1BF29B1A00760496 /* SupportCharactersList.plist in Resources */,
+				912BBD3C1BF56BF3004B7939 /* MissionList.plist in Resources */,
 				912AD7331BCADDEC00A62255 /* Main.storyboard in Resources */,
 				9112E0881BEF096700905F58 /* EnvironmentList.plist in Resources */,
 				91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */,
+				913B5D831BF516B400A70E6A /* StartScreenScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912BBD361BF5629C004B7939 /* VehicleSelectViewController.swift in Sources */,
 				912AD72E1BCADDEB00A62255 /* GameScene.swift in Sources */,
 				91F992B71BF3CEE000D6C1B4 /* VehicleHandler.swift in Sources */,
 				91F318341BE9172D00066B44 /* EventHandler.swift in Sources */,
@@ -321,6 +349,10 @@
 				912AD72A1BCADDEB00A62255 /* AppDelegate.swift in Sources */,
 				91BFB41D1BDE7E6000D22D30 /* GameMotor.swift in Sources */,
 				91217BC31BCC055600E44EC1 /* SupportCharacters.swift in Sources */,
+				912BBD401BF62881004B7939 /* CharacterCollectionViewCell.swift in Sources */,
+				913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */,
+				912BBD381BF5655F004B7939 /* MissionSelectViewController.swift in Sources */,
+				912BBD3E1BF57F52004B7939 /* MissionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

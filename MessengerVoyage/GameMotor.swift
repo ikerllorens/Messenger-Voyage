@@ -83,7 +83,7 @@ class GameMotor: NSObject {
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
         //_ = SupportCharacters.init(characterClass: "Thug", characterName: "Arnolden Saussage")
-        🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
+        self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
     }
     
     func pickEvent() {
@@ -196,7 +196,6 @@ class GameMotor: NSObject {
         }
     }
     
-    //TODO: Eliminar
     func alterMotor(parameter: String, value: Double) {
         switch (parameter) {
         case "modifyBaseProbability":
@@ -211,6 +210,7 @@ class GameMotor: NSObject {
         }
     }
     
+    //TODO: Eliminar prints 
     func pauseTimer() {
         self.🕑?.invalidate()
         print("yes: ", debugY, " no: ", debugN)
@@ -218,6 +218,7 @@ class GameMotor: NSObject {
         print("W: ", debugEvW, " X: ", debugEvX, " Y: ", debugEvY, " Z: ", debugEvZ)
         print("A: ", debugEvA, " B: ", debugEvB, " C: ", debugEvC, " D: ", debugEvD)
         print("ProbBase: ", self.baseProbabilityEvent)
+        self.🕑?.fire()
     }
     
     private func moveTablePosition() {

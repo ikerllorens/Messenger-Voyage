@@ -9,8 +9,9 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    var motor: GameMotor!
     override func didMoveToView(view: SKView) {
-        
+        self.motor = GameMotor()
     }
     
     override func update(currentTime: CFTimeInterval) {
