@@ -79,7 +79,6 @@ class MissionSelectViewController: UIViewController {
      - parameter accessoryButtonTappedForRowWithIndexPath: Indice del boton al que se le dio click
      */
     func tableView(tableView:UITableView, accessoryButtonTappedForRowWithIndexPath: NSIndexPath) {
-        print((self.missionsTable.cellForRowAtIndexPath(accessoryButtonTappedForRowWithIndexPath) as! MissionTableViewCell).cellInfo)
         self.missionInfoView.hidden = false
         self.missionInfoTitle.text = (self.missionsTable.cellForRowAtIndexPath(accessoryButtonTappedForRowWithIndexPath) as! MissionTableViewCell).cellInfo.objectForKey("Title") as? String
         self.missionInfoTitle.sizeToFit()
@@ -107,7 +106,9 @@ class MissionSelectViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let selectedCell = sender as? MissionTableViewCell {
-            print(selectedCell.cellInfo)
+            var gameInfo: Array<AnyObject> = []
+            gameInfo.append(selectedCell.cellInfo)
+            (segue.destinationViewController as! VehicleSelectViewController).gameSelections = gameInfo
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

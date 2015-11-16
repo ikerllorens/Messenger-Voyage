@@ -2,12 +2,74 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Shaman</key>
+	<dict>
+		<key>Changuito Ojos Saltones</key>
+		<dict>
+			<key>control_Selected</key>
+			<false/>
+			<key>Name</key>
+			<string>Changuito Ojos Saltones</string>
+			<key>BloodType</key>
+			<integer>0</integer>
+			<key>Weight</key>
+			<integer>113</integer>
+			<key>Height</key>
+			<integer>188</integer>
+			<key>Age</key>
+			<integer>35</integer>
+			<key>Buffs</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>Medic</key>
+	<dict>
+		<key>Çesc Jr.</key>
+		<dict>
+			<key>control_Selected</key>
+			<false/>
+			<key>Name</key>
+			<string>Çesc Jr.</string>
+			<key>BloodType</key>
+			<integer>0</integer>
+			<key>Weight</key>
+			<integer>113</integer>
+			<key>Height</key>
+			<integer>188</integer>
+			<key>Age</key>
+			<integer>35</integer>
+			<key>Buffs</key>
+			<dict/>
+		</dict>
+	</dict>
+	<key>Scientist</key>
+	<dict>
+		<key>Jekyl Costa</key>
+		<dict>
+			<key>control_Selected</key>
+			<false/>
+			<key>Name</key>
+			<string>Jekyl Costa</string>
+			<key>BloodType</key>
+			<integer>0</integer>
+			<key>Weight</key>
+			<integer>113</integer>
+			<key>Height</key>
+			<integer>188</integer>
+			<key>Age</key>
+			<integer>35</integer>
+			<key>Buffs</key>
+			<dict/>
+		</dict>
+	</dict>
 	<key>Thug</key>
 	<dict>
 		<key>Arnolden Saussage</key>
 		<dict>
 			<key>Name</key>
 			<string>Arnolden Saussage</string>
+			<key>control_Selected</key>
+			<false/>
 			<key>BloodType</key>
 			<integer>0</integer>
 			<key>Weight</key>

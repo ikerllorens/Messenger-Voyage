@@ -4,8 +4,38 @@
 <dict>
 	<key>VehicleTemplate</key>
 	<dict>
-		<key>Name</key>
+		<key>Description</key>
+		<string>Template Description</string>
+		<key>Art</key>
 		<string></string>
+		<key>Name</key>
+		<string>TemplateName</string>
+		<key>Fuel</key>
+		<integer>0</integer>
+		<key>Buffs</key>
+		<dict/>
+	</dict>
+	<key>VehicleTemplate - 2 - 2</key>
+	<dict>
+		<key>Description</key>
+		<string></string>
+		<key>Art</key>
+		<string></string>
+		<key>Name</key>
+		<string>Ultra Super Mega Tank</string>
+		<key>Fuel</key>
+		<integer>0</integer>
+		<key>Buffs</key>
+		<dict/>
+	</dict>
+	<key>VehicleTemplate - 2</key>
+	<dict>
+		<key>Description</key>
+		<string></string>
+		<key>Art</key>
+		<string></string>
+		<key>Name</key>
+		<string>Bike of Doom</string>
 		<key>Fuel</key>
 		<integer>0</integer>
 		<key>Buffs</key>
