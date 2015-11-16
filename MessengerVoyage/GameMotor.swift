@@ -69,21 +69,31 @@ class GameMotor: NSObject {
     var debugEvZ = 0
     
     //MARK: Metodos
-    override init() {
+    init(parameters: Array<AnyObject>) {
         super.init()
         //Iniciar la tabla
         for(var i = 0; i < 601; ++i) {
-            permutationTable.append(Double(arc4random_uniform(101)))
+            permutationTable.append(Double(arc4random_uniform(100)))
         }
         let path = NSBundle.mainBundle().pathForResource("EventList", ofType: "plist")
         self.eventHandler = EventHandler(motor: self)
-        self.environmentHandler = EnvironmentHandler(motor: self, startEnvironment: "Desert")
-        self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: ["character1": ["Class":"Thug", "Name":"Arnolden Saussage"]], motor: self) //cambiar selectedCharacters
-        self.vehicleHandler = VehicleHandler(motor: self, selectedVehicle: "VehicleTemplate") //cambiar selectedVehicle
+        let missionParameters = parameters[0] as! NSDictionary
+        self.environmentHandler = EnvironmentHandler(motor: self, startEnvironment: missionParameters.objectForKey("StartEnvironent") as! String)
+        let modifiers = missionParameters.objectForKey("Modifiers") as! NSDictionary
+        for modifier in modifiers.allKeys {
+            alterMotor(modifier as! String, value: modifiers.objectForKey(modifier) as! Double)
+        }
+//        self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: ["character1": ["Class":"Thug", "Name":"Arnolden Saussage"]], motor: self) //cambiar selectedCharacters
+        self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: parameters[2] as! NSDictionary, motor: self)
+        //self.vehicleHandler = VehicleHandler(motor: self, selectedVehicle: "VehicleTemplate") //cambiar selectedVehicle
+        /*
+        * Importante: La lave del diccionario del plist debe ser igual al nombre del vehiculo
+        */
+        self.vehicleHandler = VehicleHandler(motor: self, selectedVehicle: parameters[1] as! String)
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
-        //_ = SupportCharacters.init(characterClass: "Thug", characterName: "Arnolden Saussage")
         self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
+        print("Start!!!!!!!!!")
     }
     
     func pickEvent() {
@@ -191,7 +201,7 @@ class GameMotor: NSObject {
             debugN++
         }
         self.animationCycle++
-        if(self.animationCycle >= 1000) {
+        if(self.animationCycle >= 10000) {
             self.pauseTimer()
         }
     }
@@ -199,11 +209,36 @@ class GameMotor: NSObject {
     func alterMotor(parameter: String, value: Double) {
         switch (parameter) {
         case "modifyBaseProbability":
-            print("baseProbabilityModified")
+            print("baseProbabilityModified", value)
             if (self.baseProbabilityEvent <= 100) {
                 self.baseProbabilityEvent = self.baseProbabilityEvent * value
             }
             break
+        case "modifyNegativeEvents":
+            print("negativeEventsModified", value)
+            if (self.baseNegPosEventProb <= 100) {
+                self.baseNegPosEventProb = self.baseNegPosEventProb * value
+            }
+            break
+        case "modifyAttackProbability":
+            print("attackProbabilityodified", value)
+            if (self.probabilityAttack <= 100) {
+                self.probabilityAttack = self.probabilityAttack * value
+            }
+            break
+        case "modifyDiscoveryProbability":
+            print("attackDIscoveryModified", value)
+            if (self.probabilityDiscovery <= 100) {
+                self.probabilityDiscovery = self.probabilityDiscovery * value
+            }
+            break
+        case "modifyClearWeatherProbability":
+            print("ClearWeatherProbabilitymodified", value)
+            if (self.probabilityClearWeather <= 100) {
+                self.probabilityClearWeather = self.probabilityClearWeather * value
+            }
+            break
+
         default:
             print("invalid parameter:", parameter)
             break
@@ -218,7 +253,8 @@ class GameMotor: NSObject {
         print("W: ", debugEvW, " X: ", debugEvX, " Y: ", debugEvY, " Z: ", debugEvZ)
         print("A: ", debugEvA, " B: ", debugEvB, " C: ", debugEvC, " D: ", debugEvD)
         print("ProbBase: ", self.baseProbabilityEvent)
-        self.🕑?.fire()
+        self.animationCycle = 0
+        //self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true)
     }
     
     private func moveTablePosition() {

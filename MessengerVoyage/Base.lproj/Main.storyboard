@@ -129,7 +129,7 @@
                                         <rect key="frame" x="8" y="17" width="0.0" height="0.0"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YrK-Fo-r4l">
@@ -220,7 +220,7 @@
                                                         <constraint firstAttribute="height" constant="58" id="j15-d7-469"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="72t-hE-LWd">
@@ -273,7 +273,7 @@
                                         <rect key="frame" x="8" y="17" width="0.0" height="0.0"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHq-Eg-MV0">
@@ -368,7 +368,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" maximumZoomScale="2" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CXG-oQ-NBQ" userLabel="Character Collection">
-                                <rect key="frame" x="34" y="44" width="530" height="528"/>
+                                <rect key="frame" x="34" y="44" width="530" height="505"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="BrH-JP-GCw">
@@ -392,7 +392,7 @@
                                                         <constraint firstAttribute="height" constant="58" id="n8O-V1-0Dm"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9B0-gv-W1b">
@@ -428,14 +428,14 @@
                                             <rect key="frame" x="8" y="14" width="42" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1L0-jb-qPJ">
                                             <rect key="frame" x="493" y="14" width="29" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -460,7 +460,7 @@
                                 </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Axq-C0-qGc" userLabel="Character Info View">
-                                <rect key="frame" x="34" y="44" width="530" height="528"/>
+                                <rect key="frame" x="34" y="44" width="530" height="505"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOc-ym-Fms">
                                         <rect key="frame" x="491" y="8" width="30" height="30"/>
@@ -479,18 +479,18 @@
                                         <rect key="frame" x="8" y="17" width="0.0" height="0.0"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="Kailasa" family="Kailasa" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gn6-hL-xlX">
-                                        <rect key="frame" x="8" y="83" width="514" height="385"/>
+                                        <rect key="frame" x="8" y="83" width="514" height="362"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51j-6E-uZy">
-                                        <rect key="frame" x="438" y="476" width="83" height="44"/>
+                                        <rect key="frame" x="439" y="453" width="83" height="44"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="83" id="gcP-1a-BnR"/>
@@ -504,7 +504,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="51j-6E-uZy" secondAttribute="trailing" constant="9" id="A5z-Zd-dTm"/>
+                                    <constraint firstAttribute="trailing" secondItem="51j-6E-uZy" secondAttribute="trailing" constant="8" id="A5z-Zd-dTm"/>
                                     <constraint firstItem="vOc-ym-Fms" firstAttribute="top" secondItem="Axq-C0-qGc" secondAttribute="top" constant="8" id="Be6-Cu-U7G"/>
                                     <constraint firstAttribute="bottom" secondItem="51j-6E-uZy" secondAttribute="bottom" constant="8" id="Hk3-iX-TUV"/>
                                     <constraint firstItem="Gn6-hL-xlX" firstAttribute="leading" secondItem="Axq-C0-qGc" secondAttribute="leading" constant="8" id="L76-k9-5KP"/>
@@ -517,21 +517,33 @@
                                     <constraint firstAttribute="bottom" secondItem="Gn6-hL-xlX" secondAttribute="bottom" constant="60" id="qZh-Jh-6pK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-Ez-Uew">
+                                <rect key="frame" x="489" y="557" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Ready!"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" id="8rS-ID-kkY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oZk-fa-Sv2" firstAttribute="top" secondItem="CXG-oQ-NBQ" secondAttribute="bottom" constant="28" id="CdE-Y6-dFa"/>
+                            <constraint firstItem="oZk-fa-Sv2" firstAttribute="top" secondItem="CXG-oQ-NBQ" secondAttribute="bottom" constant="51" id="CdE-Y6-dFa"/>
                             <constraint firstItem="Axq-C0-qGc" firstAttribute="height" secondItem="CXG-oQ-NBQ" secondAttribute="height" id="Q8i-4h-Agc"/>
                             <constraint firstItem="CXG-oQ-NBQ" firstAttribute="top" secondItem="GXf-xH-nhG" secondAttribute="bottom" constant="24" id="RvD-2B-11K"/>
                             <constraint firstItem="Axq-C0-qGc" firstAttribute="centerY" secondItem="CXG-oQ-NBQ" secondAttribute="centerY" id="S5G-E8-kcq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CXG-oQ-NBQ" secondAttribute="trailing" constant="16" id="bSE-qC-Dyv"/>
+                            <constraint firstItem="mqe-Ez-Uew" firstAttribute="leading" secondItem="Axq-C0-qGc" secondAttribute="trailing" constant="-75" id="c4a-5O-Mgq"/>
                             <constraint firstItem="Axq-C0-qGc" firstAttribute="centerX" secondItem="CXG-oQ-NBQ" secondAttribute="centerX" id="jQv-rF-g9D"/>
+                            <constraint firstItem="oZk-fa-Sv2" firstAttribute="top" secondItem="mqe-Ez-Uew" secondAttribute="bottom" constant="13" id="k9N-UZ-wxH"/>
                             <constraint firstAttribute="leadingMargin" secondItem="CXG-oQ-NBQ" secondAttribute="leading" constant="-14" id="kuz-aW-UtR"/>
                             <constraint firstItem="Axq-C0-qGc" firstAttribute="width" secondItem="CXG-oQ-NBQ" secondAttribute="width" id="me0-Qg-KZe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mqe-Ez-Uew" secondAttribute="trailing" constant="16" id="oZX-Iq-cMR"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ReadyButton" destination="mqe-Ez-Uew" id="RQs-eg-iLA"/>
                         <outlet property="infoVehicleDescription" destination="Gn6-hL-xlX" id="A4x-1M-oI1"/>
                         <outlet property="infoVehicleName" destination="JPd-0b-ZsP" id="0ya-98-JwI"/>
                         <outlet property="selectDeselectButton" destination="51j-6E-uZy" id="6nZ-Wg-q9C"/>

@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>VehicleTemplate</key>
+	<key>TemplateName</key>
 	<dict>
 		<key>Description</key>
 		<string>Template Description</string>
@@ -15,7 +15,7 @@
 		<key>Buffs</key>
 		<dict/>
 	</dict>
-	<key>VehicleTemplate - 2 - 2</key>
+	<key>Ultra Super Mega Tank</key>
 	<dict>
 		<key>Description</key>
 		<string></string>
@@ -28,10 +28,10 @@
 		<key>Buffs</key>
 		<dict/>
 	</dict>
-	<key>VehicleTemplate - 2</key>
+	<key>Bike of Doom</key>
 	<dict>
 		<key>Description</key>
-		<string></string>
+		<string>🤕</string>
 		<key>Art</key>
 		<string></string>
 		<key>Name</key>
@@ -39,7 +39,12 @@
 		<key>Fuel</key>
 		<integer>0</integer>
 		<key>Buffs</key>
-		<dict/>
+		<dict>
+			<key>modifyNegativeEvents</key>
+			<real>0.5</real>
+			<key>modifyAttackProbability</key>
+			<real>1.1</real>
+		</dict>
 	</dict>
 </dict>
 </plist>

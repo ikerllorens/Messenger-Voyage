@@ -9,25 +9,27 @@
 import UIKit
 
 class CharacterSelectViewController: UIViewController, UICollectionViewDelegate {
+    @IBOutlet weak var ReadyButton: UIButton!
     @IBOutlet weak var selectDeselectButton: UIButton!
     @IBOutlet weak var infoVehicleName: UILabel!
     @IBOutlet weak var vehicleCollection: UICollectionView!
     @IBOutlet weak var infoVehicleDescription: UITextView!
     @IBOutlet weak var vehicleInfoView: UIView!
     var gameSelections: Array<AnyObject>!
-    var selectedCell: VehicleCollectionViewCell!
+    var selectedCellPath: NSIndexPath!
     private var numberSelected: Int = 0
     private let classes = ["Thug", "Shaman", "Medic", "Scientist"]
-    private let classDescription = ["Heavy guy, he assures less attacks", "A bit crazy, weather will be favorable", "No words needed...", "Curious, he may discover things... If payed well"]
+    private let classDescription = ["Heavy guy, he assures less attacks", "A bit crazy, weather will be favorable... or not", "No words needed...", "Curious, he may discover things... If payed well"]
     private var thugCharactersList: Array<NSMutableDictionary> = []
     private var shamanCharactersList: Array<NSMutableDictionary> = []
     private var medicCharactersList: Array<NSMutableDictionary> = []
     private var scientistCharacterList: Array<NSMutableDictionary> = []
-    private var currentSelectedCharacters: [String: String] = [:]
+    private var currentSelectedCharacters: [[String: String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vehicleInfoView.hidden = true
+        self.ReadyButton.hidden = true
         vehicleCollection.reloadData()
         let path = NSBundle.mainBundle().pathForResource("SupportCharactersList", ofType: "plist")
         let allCharacters = NSMutableDictionary.init(contentsOfFile: path!)! as NSDictionary
@@ -75,7 +77,6 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
     }
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String,atIndexPath indexPath: NSIndexPath) -> CharacterHeaderCollectionReusableView {
-        print(indexPath.section)
         let header = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier:  "sectionCharacterHeader", forIndexPath: indexPath) as! CharacterHeaderCollectionReusableView
         let currentClassName = self.classes[indexPath.section]
         let currentClassDescription = self.classDescription[indexPath.section]
@@ -86,12 +87,12 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! VehicleCollectionViewCell
+        let selectedCell = collectionView.cellForItemAtIndexPath(indexPath) as! VehicleCollectionViewCell
         self.vehicleInfoView.hidden = false
-        self.infoVehicleName.text = self.selectedCell.vehicleInfo.objectForKey("Name") as? String
+        self.infoVehicleName.text = selectedCell.vehicleInfo.objectForKey("Name") as? String
         self.infoVehicleName.sizeToFit()
-        self.infoVehicleDescription.text = self.selectedCell.vehicleInfo.objectForKey("Description") as? String
-        if((self.selectedCell.vehicleInfo.objectForKey("control_Selected") as? Bool) == true) {
+        self.infoVehicleDescription.text = selectedCell.vehicleInfo.objectForKey("Description") as? String
+        if((selectedCell.vehicleInfo.objectForKey("control_Selected") as? Bool) == true) {
             self.selectDeselectButton.setTitle("Deselect", forState: UIControlState.Normal)
         } else {
             self.selectDeselectButton.setTitle("Select", forState: UIControlState.Normal)
@@ -99,6 +100,8 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
         UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             self.vehicleInfoView.alpha = 0.95
             }, completion: {(completed) in self.vehicleInfoView.hidden = false})
+        
+        self.selectedCellPath = indexPath
     }
     
     @IBAction func dismissDetail(sender: UIButton) {
@@ -109,11 +112,30 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
     }
     
     @IBAction func selectVehicle(sender: AnyObject) {
-        print(selectedCell.vehicleInfo)
-        if((self.selectedCell.vehicleInfo.objectForKey("control_Selected") as? Bool) == true) {
-            self.selectedCell.vehicleInfo.setValue(false, forKey: "control_Selected")
+        let selectedCell = self.vehicleCollection.cellForItemAtIndexPath(self.selectedCellPath) as! VehicleCollectionViewCell
+        if((selectedCell.vehicleInfo.objectForKey("control_Selected") as? Bool) == true) {
+            selectedCell.vehicleInfo.setValue(false, forKey: "control_Selected")
+            self.selectDeselectButton.setTitle("Select", forState: UIControlState.Normal)
+            selectedCell.backgroundColor = UIColor.clearColor()
+            var i = 0
+            for character in self.currentSelectedCharacters {
+                if(character["Name"] == selectedCell.vehicleInfo.objectForKey("Name") as? String) {
+                    self.currentSelectedCharacters.removeAtIndex(i)
+                }
+                i++
+            }
+            self.numberSelected--
         } else {
-            self.selectedCell.vehicleInfo.setValue(true, forKey: "control_Selected")
+            selectedCell.vehicleInfo.setValue(true, forKey: "control_Selected")
+            self.selectDeselectButton.setTitle("Deselect", forState: UIControlState.Normal)
+            selectedCell.backgroundColor = UIColor.greenColor()
+            self.currentSelectedCharacters.append(["Class": self.classes[self.selectedCellPath.section], "Name": selectedCell.vehicleInfo.objectForKey("Name") as! String])
+            self.numberSelected++
+        }
+        if (numberSelected == 4) {
+            self.ReadyButton.hidden = false
+        } else {
+            self.ReadyButton.hidden = true
         }
     }
     
@@ -138,6 +160,11 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
         }
         cell.vehicleName.text = character.objectForKey("Name") as? String
         cell.vehicleInfo = character
+        if(character.objectForKey("control_Selected") as! Bool == true) {
+            cell.backgroundColor = UIColor.greenColor()
+        } else {
+            cell.backgroundColor = UIColor.clearColor()
+        }
         return cell
     }
     
@@ -148,7 +175,9 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         //self.gameSelections.append(currentSelectedVehicleInfo)
-        
+        let characterDict = ["Character1": self.currentSelectedCharacters[0], "Character2": self.currentSelectedCharacters[1],"Character3": self.currentSelectedCharacters[2],"Character4": self.currentSelectedCharacters[3]]
+        self.gameSelections.append(characterDict)
+        (segue.destinationViewController as! GameViewController).initGame = self.gameSelections
     }
 
 }

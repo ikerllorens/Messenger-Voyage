@@ -10,10 +10,13 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-
+    var motor: GameMotor!
+    var initGame: Array<AnyObject>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let skView = self.view as! SKView
+        self.motor = GameMotor(parameters: initGame)
         let gameScene = GameScene(fileNamed: "StartScreenScene")
         skView.presentScene(gameScene)
     }

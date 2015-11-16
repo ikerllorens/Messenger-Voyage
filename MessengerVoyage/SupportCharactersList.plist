@@ -4,6 +4,26 @@
 <dict>
 	<key>Shaman</key>
 	<dict>
+		<key>Lucky Johnny</key>
+		<dict>
+			<key>control_Selected</key>
+			<false/>
+			<key>Name</key>
+			<string>Lucky Johnny</string>
+			<key>BloodType</key>
+			<integer>0</integer>
+			<key>Weight</key>
+			<integer>60</integer>
+			<key>Height</key>
+			<integer>190</integer>
+			<key>Age</key>
+			<integer>50</integer>
+			<key>Buffs</key>
+			<dict>
+				<key>modifyBaseProbability</key>
+				<real>3</real>
+			</dict>
+		</dict>
 		<key>Changuito Ojos Saltones</key>
 		<dict>
 			<key>control_Selected</key>
@@ -13,13 +33,16 @@
 			<key>BloodType</key>
 			<integer>0</integer>
 			<key>Weight</key>
-			<integer>113</integer>
+			<integer>40</integer>
 			<key>Height</key>
-			<integer>188</integer>
+			<integer>160</integer>
 			<key>Age</key>
-			<integer>35</integer>
+			<integer>70</integer>
 			<key>Buffs</key>
-			<dict/>
+			<dict>
+				<key>modifyClearWeatherProbability</key>
+				<real>1.5</real>
+			</dict>
 		</dict>
 	</dict>
 	<key>Medic</key>
@@ -33,13 +56,16 @@
 			<key>BloodType</key>
 			<integer>0</integer>
 			<key>Weight</key>
-			<integer>113</integer>
+			<integer>90</integer>
 			<key>Height</key>
 			<integer>188</integer>
 			<key>Age</key>
-			<integer>35</integer>
+			<integer>29</integer>
 			<key>Buffs</key>
-			<dict/>
+			<dict>
+				<key>modifyDiscoveryProbability</key>
+				<real>1.4</real>
+			</dict>
 		</dict>
 	</dict>
 	<key>Scientist</key>
@@ -53,13 +79,16 @@
 			<key>BloodType</key>
 			<integer>0</integer>
 			<key>Weight</key>
-			<integer>113</integer>
+			<integer>30</integer>
 			<key>Height</key>
-			<integer>188</integer>
+			<integer>120</integer>
 			<key>Age</key>
-			<integer>35</integer>
+			<integer>16</integer>
 			<key>Buffs</key>
-			<dict/>
+			<dict>
+				<key>modifyDiscoveryProbability</key>
+				<real>1.2</real>
+			</dict>
 		</dict>
 	</dict>
 	<key>Thug</key>
@@ -79,7 +108,12 @@
 			<key>Age</key>
 			<integer>35</integer>
 			<key>Buffs</key>
-			<dict/>
+			<dict>
+				<key>modifyAttackProbability</key>
+				<real>1.6</real>
+				<key>modifyBaseProbability</key>
+				<integer>1</integer>
+			</dict>
 		</dict>
 	</dict>
 </dict>

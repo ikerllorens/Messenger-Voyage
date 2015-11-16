@@ -32,8 +32,8 @@
 		91A22C2C1BF29B1A00760496 /* SupportCharactersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */; };
 		91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */; };
 		91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91ABF5641BE0433300D3CCE2 /* EventList.plist */; };
-		91AFD9C11BF0F53100016744 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91AFD9C01BF0F53100016744 /* HealthKit.framework */; };
 		91BFB41D1BDE7E6000D22D30 /* GameMotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */; };
+		91E3BD6D1BF9799A003C3F4B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E3BD6C1BF9799A003C3F4B /* HealthKit.framework */; };
 		91F318341BE9172D00066B44 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F318331BE9172D00066B44 /* EventHandler.swift */; };
 		91F992B51BF3CD5A00D6C1B4 /* VehicleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */; };
 		91F992B71BF3CEE000D6C1B4 /* VehicleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F992B61BF3CEE000D6C1B4 /* VehicleHandler.swift */; };
@@ -89,8 +89,9 @@
 		91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnvironmentHandler.swift; path = Classes/EnvironmentHandler.swift; sourceTree = "<group>"; };
 		91ABF5641BE0433300D3CCE2 /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventList.plist; path = Classes/EventList.plist; sourceTree = "<group>"; };
 		91AFD9BF1BF0F53000016744 /* MessengerVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MessengerVoyage.entitlements; sourceTree = "<group>"; };
-		91AFD9C01BF0F53100016744 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMotor.swift; sourceTree = "<group>"; };
+		91E3BD6C1BF9799A003C3F4B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		91E3BD6E1BF9799A003C3F4B /* Ultra Delivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Ultra Delivery.entitlements"; sourceTree = "<group>"; };
 		91F318331BE9172D00066B44 /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
 		91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = VehicleList.plist; sourceTree = "<group>"; };
 		91F992B61BF3CEE000D6C1B4 /* VehicleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleHandler.swift; path = Classes/VehicleHandler.swift; sourceTree = "<group>"; };
@@ -101,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91AFD9C11BF0F53100016744 /* HealthKit.framework in Frameworks */,
+				91E3BD6D1BF9799A003C3F4B /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +138,7 @@
 		912AD71D1BCADDEB00A62255 = {
 			isa = PBXGroup;
 			children = (
-				91AFD9C01BF0F53100016744 /* HealthKit.framework */,
+				91E3BD6C1BF9799A003C3F4B /* HealthKit.framework */,
 				912AD7281BCADDEB00A62255 /* MessengerVoyage */,
 				912AD7411BCADDEC00A62255 /* MessengerVoyageTests */,
 				912AD74C1BCADDEC00A62255 /* MessengerVoyageUITests */,
@@ -158,6 +159,7 @@
 		912AD7281BCADDEB00A62255 /* MessengerVoyage */ = {
 			isa = PBXGroup;
 			children = (
+				91E3BD6E1BF9799A003C3F4B /* Ultra Delivery.entitlements */,
 				912BBD411BF62C92004B7939 /* ASSETS */,
 				91217BC41BCC056100E44EC1 /* HANDLERS */,
 				912BBD431BF62D11004B7939 /* CONTROLLERS */,
@@ -306,6 +308,9 @@
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 77LECLY3EB;
 						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
 							com.apple.HealthKit = {
 								enabled = 1;
 							};
@@ -537,7 +542,7 @@
 		912AD7531BCADDEC00A62255 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MessengerVoyage/MessengerVoyage.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "MessengerVoyage/Ultra Delivery.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MessengerVoyage/Info.plist;
@@ -553,7 +558,7 @@
 		912AD7541BCADDEC00A62255 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MessengerVoyage/MessengerVoyage.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "MessengerVoyage/Ultra Delivery.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MessengerVoyage/Info.plist;
