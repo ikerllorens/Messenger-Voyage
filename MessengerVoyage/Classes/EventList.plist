@@ -16,8 +16,6 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>

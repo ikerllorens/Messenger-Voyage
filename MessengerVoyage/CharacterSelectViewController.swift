@@ -25,6 +25,7 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
     private var medicCharactersList: Array<NSMutableDictionary> = []
     private var scientistCharacterList: Array<NSMutableDictionary> = []
     private var currentSelectedCharacters: [[String: String]] = []
+    let userProfile = UserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

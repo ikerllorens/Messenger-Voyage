@@ -16,6 +16,7 @@ class VehicleSelectViewController: UIViewController, UICollectionViewDelegate {
     private var vehicleList: Array<NSDictionary> = []
     @IBOutlet weak var vehicleInfoView: UIView!
     private var currentSelectedVehicleInfo: String!
+    let userProfile = UserModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()

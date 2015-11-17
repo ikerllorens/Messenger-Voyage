@@ -9,9 +9,6 @@
 import UIKit
 import Foundation
 
-//TODO clase de entorno.
-//TODO objeto de evento
-
 class GameMotor: NSObject {
     //private var dayNightCicle: Float = 1.0
     private var distance: Double = 10000.0
@@ -48,10 +45,11 @@ class GameMotor: NSObject {
     
     //MARK: Handlers
     //Objetos encargados de liberar carga al motor
-    private var eventHandler: EventHandler!
-    private var environmentHandler: EnvironmentHandler!
-    private var supportCharactersHandler: SupportCharactersHandler!
-    private var vehicleHandler: VehicleHandler!
+    var eventHandler: EventHandler!
+    var environmentHandler: EnvironmentHandler!
+    var supportCharactersHandler: SupportCharactersHandler!
+    var vehicleHandler: VehicleHandler!
+    var userInfo: UserModel!
     
     //MARK: Debug variable
     //TODO: Borrar
@@ -83,15 +81,17 @@ class GameMotor: NSObject {
         for modifier in modifiers.allKeys {
             alterMotor(modifier as! String, value: modifiers.objectForKey(modifier) as! Double)
         }
-//        self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: ["character1": ["Class":"Thug", "Name":"Arnolden Saussage"]], motor: self) //cambiar selectedCharacters
         self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: parameters[2] as! NSDictionary, motor: self)
-        //self.vehicleHandler = VehicleHandler(motor: self, selectedVehicle: "VehicleTemplate") //cambiar selectedVehicle
         /*
         * Importante: La lave del diccionario del plist debe ser igual al nombre del vehiculo
         */
         self.vehicleHandler = VehicleHandler(motor: self, selectedVehicle: parameters[1] as! String)
         self.eventRootPositive = (NSArray(contentsOfFile: path!)!.objectAtIndex(0) as? NSDictionary)
         self.eventRootNegative = (NSArray(contentsOfFile: path!)!.objectAtIndex(1) as? NSDictionary)
+        
+        self.userInfo = parameters[3] as! UserModel
+        self.userInfo.buildStamina()
+        
         self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true) //5 segundos, base. Loops de animacion
         print("Start!!!!!!!!!")
     }
@@ -201,7 +201,7 @@ class GameMotor: NSObject {
             debugN++
         }
         self.animationCycle++
-        if(self.animationCycle >= 10000) {
+        if(self.animationCycle >= 1000) {
             self.pauseTimer()
         }
     }
@@ -221,7 +221,7 @@ class GameMotor: NSObject {
             }
             break
         case "modifyAttackProbability":
-            print("attackProbabilityodified", value)
+            print("attackProbabilityModified", value)
             if (self.probabilityAttack <= 100) {
                 self.probabilityAttack = self.probabilityAttack * value
             }

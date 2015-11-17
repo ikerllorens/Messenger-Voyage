@@ -7,38 +7,30 @@
 //
 
 import UIKit
-import SpriteKit
 
 class GameViewController: UIViewController {
     var motor: GameMotor!
     var initGame: Array<AnyObject>!
+    let userProfile = UserModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let skView = self.view as! SKView
+        initGame.append(userProfile)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventHappened:", name: "positiveEventOcurred", object: motor)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventHappened:", name: "negativeEventOcurred", object: motor)
         self.motor = GameMotor(parameters: initGame)
-        let gameScene = GameScene(fileNamed: "StartScreenScene")
-        skView.presentScene(gameScene)
     }
 
-//    override func shouldAutorotate() -> Bool {
-//        return true
-//    }
-
-//    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-////        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-////            return .AllButUpsideDown
-////        } else {
-////            return .All
-////        }
-//    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    
+    func eventHappened(notification: NSNotification) {
+        let data = notification.userInfo as NSDictionary!
+        // Ventana de evento
+        print(data)
     }
+
 }

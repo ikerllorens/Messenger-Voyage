@@ -14,6 +14,7 @@ class MissionSelectViewController: UIViewController {
     @IBOutlet weak var closeMissionInfo: UIButton!
     @IBOutlet weak var missionInfoTitle: UILabel!
     @IBOutlet weak var missionInfoDescription: UITextView!
+    let userProfile = UserModel()
     
     let sections =  ["Easy", "Medium", "Hard", "Insane"]
     var missions: Array<Array<NSDictionary>> = [
