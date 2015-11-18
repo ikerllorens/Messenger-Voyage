@@ -491,15 +491,15 @@
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-wT-XtR">
-                                                <rect key="frame" x="430" y="0.0" width="130" height="98"/>
-                                                <animations/>
-                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPx-GT-Gbf">
                                                 <rect key="frame" x="286" y="0.0" width="130" height="98"/>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-wT-XtR">
+                                                <rect key="frame" x="430" y="0.0" width="130" height="98"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
                                         </subviews>
                                         <animations/>
@@ -526,8 +526,36 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVJ-oF-UVl">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="458"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-vA-TdF">
+                                                <rect key="frame" x="8" y="8" width="42" height="56"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="KjE-6b-Pgg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqK-pn-d4m">
+                                                <rect key="frame" x="0.0" y="72" width="552" height="378"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="GqK-pn-d4m" secondAttribute="bottom" constant="8" id="5Gg-RC-LPr"/>
+                                            <constraint firstItem="GqK-pn-d4m" firstAttribute="top" secondItem="jhb-vA-TdF" secondAttribute="bottom" constant="8" id="Bd6-TN-Ngr"/>
+                                            <constraint firstItem="jhb-vA-TdF" firstAttribute="top" secondItem="hVJ-oF-UVl" secondAttribute="top" constant="8" id="Xnc-5a-1KM"/>
+                                            <constraint firstAttribute="trailing" secondItem="GqK-pn-d4m" secondAttribute="trailing" constant="8" id="ZGk-Qa-qCI"/>
+                                            <constraint firstItem="GqK-pn-d4m" firstAttribute="leading" secondItem="hVJ-oF-UVl" secondAttribute="leading" id="of6-cD-CET"/>
+                                            <constraint firstItem="jhb-vA-TdF" firstAttribute="leading" secondItem="hVJ-oF-UVl" secondAttribute="leading" constant="8" id="voA-iU-UTX"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -554,6 +582,15 @@
                             <constraint firstAttribute="leadingMargin" secondItem="otc-HE-uWH" secondAttribute="leading" id="qMT-iF-z0x"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eventChoiceA" destination="KaB-q4-AnF" id="s6D-vI-Zts"/>
+                        <outlet property="eventChoiceB" destination="Vm1-Az-Ch5" id="HvK-eh-BTS"/>
+                        <outlet property="eventChoiceC" destination="vPx-GT-Gbf" id="9QR-j6-v2W"/>
+                        <outlet property="eventChoiceD" destination="9Of-wT-XtR" id="7FW-8p-gck"/>
+                        <outlet property="eventTextField" destination="GqK-pn-d4m" id="Mgx-ml-wcV"/>
+                        <outlet property="eventTitleLabel" destination="jhb-vA-TdF" id="liz-Hd-4BQ"/>
+                        <outlet property="eventView" destination="otc-HE-uWH" id="Yfg-nv-hDR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>

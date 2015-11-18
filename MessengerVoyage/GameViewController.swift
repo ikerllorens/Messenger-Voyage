@@ -13,6 +13,15 @@ class GameViewController: UIViewController {
     var initGame: Array<AnyObject>!
     let userProfile = UserModel()
     
+    @IBOutlet weak var eventView: UIView!
+    
+    @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var eventTextField: UITextView!
+    @IBOutlet weak var eventChoiceA: UIView!
+    @IBOutlet weak var eventChoiceB: UIView!
+    @IBOutlet weak var eventChoiceC: UIView!
+    @IBOutlet weak var eventChoiceD: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +38,11 @@ class GameViewController: UIViewController {
     
     func eventHappened(notification: NSNotification) {
         let data = notification.userInfo as NSDictionary!
+        dispatch_async(dispatch_get_main_queue(), {
+            self.eventTitleLabel.text = data.objectForKey("Title") as? String
+            self.eventTextField.text = data.objectForKey("Text") as! String
+        })
+        
         // Ventana de evento
         //print(data)
     }
