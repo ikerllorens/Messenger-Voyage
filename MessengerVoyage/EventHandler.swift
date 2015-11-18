@@ -17,6 +17,7 @@ class EventHandler: NSObject {
         self.motor = motor
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventHappened:", name: "positiveEventOcurred", object: motor)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventHappened:", name: "negativeEventOcurred", object: motor)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventOptionSelected:", name: "eventDecissionMade", object: nil)
     }
     
     func eventHappened(info: NSNotification) {
@@ -30,6 +31,22 @@ class EventHandler: NSObject {
                 for key in Array(inmediatteEffs.allKeys) {
                     print(self.currentEvent.objectForKey("Title"))
                     self.motor.alterMotor(key as! String, value: inmediatteEffs.objectForKey(key) as! Double)
+                }
+            }
+        }
+    }
+    
+    func eventOptionSelected(notification: NSNotification) {
+        
+         if let effects = notification.userInfo as NSDictionary! {
+            let queueInmediateEffectsEvents = NSOperationQueue()
+            queueInmediateEffectsEvents.addOperationWithBlock() {
+                for key in Array(effects.allKeys) {
+                    if let valueModifier = effects.objectForKey(key) as? Double {
+                        self.motor.alterMotor(key as! String, value: valueModifier)
+                    } else {
+                        print("Invalid Modifier Value in event OptionSelected")
+                    }
                 }
             }
         }

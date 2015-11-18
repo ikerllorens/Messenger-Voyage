@@ -21,22 +21,16 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -55,29 +49,21 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -96,29 +82,21 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -137,8 +115,6 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
@@ -158,8 +134,6 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -180,29 +154,21 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -221,29 +187,21 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -262,29 +220,21 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>
@@ -303,29 +253,21 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionA</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionB</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionD</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>SubEvents</key>
 				<array/>

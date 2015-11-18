@@ -158,7 +158,7 @@ class UserProfileViewController: UIViewController {
             if (self.errorFlag) {
                 dispatch_async(dispatch_get_main_queue(), {
                     let alertController = UIAlertController(title: "Error", message:
-                        "No permission to read some data from HealthKit", preferredStyle: UIAlertControllerStyle.Alert)
+                        "No permission to read some data or missing from HealthKit", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default,handler: nil))
                     self.presentViewController(alertController, animated: true, completion: nil)
                 })

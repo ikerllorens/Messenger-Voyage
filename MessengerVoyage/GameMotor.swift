@@ -16,7 +16,7 @@ class GameMotor: NSObject {
     private var permutationTable: [Double] = []
     private var permutationTablePosition: Int = 0
     private var temporalValues: Double = 0
-    private var baseTime: Double = 0.0001
+    private var baseTime: Double = 1
     private var 🕑: NSTimer?
     
     //Si es mayor habra mas eventos, si es menor habra menos eventos
@@ -70,6 +70,8 @@ class GameMotor: NSObject {
     init(parameters: Array<AnyObject>) {
         super.init()
         //Iniciar la tabla
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "continueTimer", name: "eventDecissionMade", object: nil)
+        
         for(var i = 0; i < 601; ++i) {
             permutationTable.append(Double(arc4random_uniform(100)))
         }
@@ -100,6 +102,7 @@ class GameMotor: NSObject {
         //self.moveTablePosition()
         if(self.permutationTable[permutationTablePosition] < self.baseProbabilityEvent) {
             //Sucedio Evento
+            self.🕑?.invalidate()
             let queue = NSOperationQueue()
             queue.addOperationWithBlock() {
                 self.moveTablePosition()
@@ -200,8 +203,7 @@ class GameMotor: NSObject {
             self.moveTablePosition()
             debugN++
         }
-        print(self.permutationTablePosition
-        )
+        //print(self.permutationTablePosition)
         self.animationCycle++
         if(self.animationCycle >= 1000) {
             self.pauseTimer()
@@ -257,6 +259,10 @@ class GameMotor: NSObject {
         print("ProbBase: ", self.baseProbabilityEvent)
         self.animationCycle = 0
         //self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true)
+    }
+    
+    func continueTimer() {
+         self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true)
     }
     
     private func moveTablePosition() {

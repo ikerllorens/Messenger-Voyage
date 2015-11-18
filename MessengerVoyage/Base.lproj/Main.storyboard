@@ -247,7 +247,7 @@
                                             <constraint firstAttribute="height" constant="30" id="pDl-kG-5ds"/>
                                             <constraint firstAttribute="width" constant="30" id="wlD-Ny-3BW"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Very-Basic-Close-icon.png"/>
+                                        <state key="normal" title="Button" image="CloseButton"/>
                                         <connections>
                                             <action selector="dismissInfoView:" destination="Tt6-UG-KMN" eventType="touchUpInside" id="AQ3-m6-5PE"/>
                                         </connections>
@@ -390,7 +390,7 @@
                                             <constraint firstAttribute="height" constant="30" id="9Fz-XU-apg"/>
                                             <constraint firstAttribute="width" constant="30" id="O30-Az-JZI"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="Very-Basic-Close-icon.png"/>
+                                        <state key="normal" title="Button" image="CloseButton"/>
                                         <connections>
                                             <action selector="dismissDetail:" destination="E7O-8E-rTz" eventType="touchUpInside" id="OUW-N3-Nq3"/>
                                             <action selector="dismissInfoView:" destination="Tt6-UG-KMN" eventType="touchUpInside" id="MbC-vI-vd6"/>
@@ -483,23 +483,104 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KaB-q4-AnF">
                                                 <rect key="frame" x="0.0" y="0.0" width="130" height="98"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-I5-ess">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="98"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="1lt-X6-1Pc" appends="YES" id="LMt-9v-El5"/>
+                                                        </connections>
+                                                    </textView>
+                                                </subviews>
                                                 <animations/>
                                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="xdx-I5-ess" firstAttribute="centerY" secondItem="KaB-q4-AnF" secondAttribute="centerY" id="4xY-87-Mn0"/>
+                                                    <constraint firstItem="xdx-I5-ess" firstAttribute="height" secondItem="KaB-q4-AnF" secondAttribute="height" id="7bm-ea-Iip"/>
+                                                    <constraint firstItem="xdx-I5-ess" firstAttribute="width" secondItem="KaB-q4-AnF" secondAttribute="width" id="Syi-ha-Q2A"/>
+                                                    <constraint firstItem="xdx-I5-ess" firstAttribute="centerX" secondItem="KaB-q4-AnF" secondAttribute="centerX" id="h2i-6F-pi3"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vm1-Az-Ch5">
                                                 <rect key="frame" x="142" y="0.0" width="130" height="98"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyg-8d-8JF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="98"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <gestureRecognizers/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="MPx-Cu-ObT" appends="YES" id="sbe-Vu-9mE"/>
+                                                        </connections>
+                                                    </textView>
+                                                </subviews>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Lyg-8d-8JF" firstAttribute="height" secondItem="Vm1-Az-Ch5" secondAttribute="height" id="Cy7-5L-t8b"/>
+                                                    <constraint firstItem="Lyg-8d-8JF" firstAttribute="width" secondItem="Vm1-Az-Ch5" secondAttribute="width" id="Hzw-Kq-fLa"/>
+                                                    <constraint firstItem="Lyg-8d-8JF" firstAttribute="centerY" secondItem="Vm1-Az-Ch5" secondAttribute="centerY" id="fWK-Yo-Cvr"/>
+                                                    <constraint firstItem="Lyg-8d-8JF" firstAttribute="centerX" secondItem="Vm1-Az-Ch5" secondAttribute="centerX" id="w6r-e2-914"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPx-GT-Gbf">
                                                 <rect key="frame" x="286" y="0.0" width="130" height="98"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-gM-Ivs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="98"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="f0f-bI-WrL" appends="YES" id="Mv5-Dl-Zv0"/>
+                                                        </connections>
+                                                    </textView>
+                                                </subviews>
                                                 <animations/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstItem="f8I-gM-Ivs" firstAttribute="centerX" secondItem="vPx-GT-Gbf" secondAttribute="centerX" id="13v-Q7-78l"/>
+                                                    <constraint firstItem="f8I-gM-Ivs" firstAttribute="height" secondItem="vPx-GT-Gbf" secondAttribute="height" id="E1C-tx-3ae"/>
+                                                    <constraint firstItem="f8I-gM-Ivs" firstAttribute="width" secondItem="vPx-GT-Gbf" secondAttribute="width" id="hIS-z8-I0M"/>
+                                                    <constraint firstItem="f8I-gM-Ivs" firstAttribute="centerY" secondItem="vPx-GT-Gbf" secondAttribute="centerY" id="xsv-5M-fC1"/>
+                                                </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-wT-XtR">
                                                 <rect key="frame" x="430" y="0.0" width="130" height="98"/>
+                                                <subviews>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOK-zE-Xd2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="130" height="98"/>
+                                                        <animations/>
+                                                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <gestureRecognizers/>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="0SU-Ue-frU" appends="YES" id="Q4X-Gp-DiR"/>
+                                                        </connections>
+                                                    </textView>
+                                                </subviews>
                                                 <animations/>
                                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="GOK-zE-Xd2" firstAttribute="centerY" secondItem="9Of-wT-XtR" secondAttribute="centerY" id="EhP-sc-mO2"/>
+                                                    <constraint firstItem="GOK-zE-Xd2" firstAttribute="width" secondItem="9Of-wT-XtR" secondAttribute="width" id="iwU-bk-DFd"/>
+                                                    <constraint firstItem="GOK-zE-Xd2" firstAttribute="centerX" secondItem="9Of-wT-XtR" secondAttribute="centerX" id="pa4-Hg-AEr"/>
+                                                    <constraint firstItem="GOK-zE-Xd2" firstAttribute="height" secondItem="9Of-wT-XtR" secondAttribute="height" id="swq-eO-iWY"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <animations/>
@@ -587,12 +668,36 @@
                         <outlet property="eventChoiceB" destination="Vm1-Az-Ch5" id="HvK-eh-BTS"/>
                         <outlet property="eventChoiceC" destination="vPx-GT-Gbf" id="9QR-j6-v2W"/>
                         <outlet property="eventChoiceD" destination="9Of-wT-XtR" id="7FW-8p-gck"/>
+                        <outlet property="eventChoiceTextA" destination="xdx-I5-ess" id="Ekb-bG-y26"/>
+                        <outlet property="eventChoiceTextB" destination="Lyg-8d-8JF" id="H0V-H3-xUg"/>
+                        <outlet property="eventChoiceTextC" destination="f8I-gM-Ivs" id="Vdc-0z-NoL"/>
+                        <outlet property="eventChoiceTextD" destination="GOK-zE-Xd2" id="OEY-un-Lec"/>
                         <outlet property="eventTextField" destination="GqK-pn-d4m" id="Mgx-ml-wcV"/>
                         <outlet property="eventTitleLabel" destination="jhb-vA-TdF" id="liz-Hd-4BQ"/>
                         <outlet property="eventView" destination="otc-HE-uWH" id="Yfg-nv-hDR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1lt-X6-1Pc">
+                    <connections>
+                        <action selector="selectDecission:" destination="BV1-FR-VrT" id="x6u-Ib-wsq"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="MPx-Cu-ObT">
+                    <connections>
+                        <action selector="selectDecission:" destination="BV1-FR-VrT" id="PBb-K6-N33"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="f0f-bI-WrL">
+                    <connections>
+                        <action selector="selectDecission:" destination="BV1-FR-VrT" id="5P5-YY-we7"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="0SU-Ue-frU">
+                    <connections>
+                        <action selector="selectDecission:" destination="BV1-FR-VrT" id="ZOy-87-hPF"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2476" y="102"/>
         </scene>
@@ -798,6 +903,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CloseButton" width="512" height="512"/>
         <image name="Spaceship" width="394" height="347"/>
         <image name="Very-Basic-Close-icon.png" width="512" height="512"/>
         <image name="night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg" width="1475" height="1106"/>
