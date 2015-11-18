@@ -30,7 +30,7 @@ class GameViewController: UIViewController {
     func eventHappened(notification: NSNotification) {
         let data = notification.userInfo as NSDictionary!
         // Ventana de evento
-        print(data)
+        //print(data)
     }
 
 }

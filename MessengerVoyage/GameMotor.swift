@@ -259,7 +259,8 @@ class GameMotor: NSObject {
     
     private func moveTablePosition() {
         self.permutationTablePosition++
-        if(permutationTablePosition >= permutationTable.count - 1) {
+        if(permutationTablePosition >= 599
+            ) {
             permutationTable[permutationTable.count - 1] = self.temporalValues
             permutationTablePosition = 0
         }

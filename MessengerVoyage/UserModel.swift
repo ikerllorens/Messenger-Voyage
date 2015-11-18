@@ -37,6 +37,8 @@ class UserModel: NSObject {
             self.userProfileHeight = loadArray.objectAtIndex(3) as! Double
             self.userProfileWeight = loadArray.objectAtIndex(4) as! Double
             print("User Data Loaded")
+        } else {
+            NSNotificationCenter.defaultCenter().postNotificationName("noUserProfileDetected", object: self)
         }
     }
     

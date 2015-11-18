@@ -23,7 +23,6 @@
 		912BBD3C1BF56BF3004B7939 /* MissionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD3B1BF56BF3004B7939 /* MissionList.plist */; };
 		912BBD3E1BF57F52004B7939 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */; };
 		912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */; };
-		913B5D831BF516B400A70E6A /* StartScreenScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 913B5D821BF516B400A70E6A /* StartScreenScene.sks */; };
 		913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B5DC41BF554FE00A70E6A /* MainViewController.swift */; };
 		914EBB0A1BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */; };
 		91530DF61BFA831300256506 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91530DF51BFA831300256506 /* UserProfileViewController.swift */; };
@@ -36,6 +35,7 @@
 		91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ABF5621BE0433300D3CCE2 /* EnvironmentHandler.swift */; };
 		91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91ABF5641BE0433300D3CCE2 /* EventList.plist */; };
 		91BFB41D1BDE7E6000D22D30 /* GameMotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */; };
+		91CC75E01BFBC462007AE3B9 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CC75DF1BFBC462007AE3B9 /* EventView.swift */; };
 		91E3BD6D1BF9799A003C3F4B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E3BD6C1BF9799A003C3F4B /* HealthKit.framework */; };
 		91F318341BE9172D00066B44 /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F318331BE9172D00066B44 /* EventHandler.swift */; };
 		91F992B51BF3CD5A00D6C1B4 /* VehicleList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91F992B41BF3CD5A00D6C1B4 /* VehicleList.plist */; };
@@ -96,6 +96,7 @@
 		91ABF5641BE0433300D3CCE2 /* EventList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventList.plist; path = Classes/EventList.plist; sourceTree = "<group>"; };
 		91AFD9BF1BF0F53000016744 /* MessengerVoyage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MessengerVoyage.entitlements; sourceTree = "<group>"; };
 		91BFB41C1BDE7E6000D22D30 /* GameMotor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMotor.swift; sourceTree = "<group>"; };
+		91CC75DF1BFBC462007AE3B9 /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventView.swift; path = ../EventView.swift; sourceTree = "<group>"; };
 		91E3BD6C1BF9799A003C3F4B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		91E3BD6E1BF9799A003C3F4B /* Ultra Delivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Ultra Delivery.entitlements"; sourceTree = "<group>"; };
 		91F318331BE9172D00066B44 /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandler.swift; sourceTree = "<group>"; };
@@ -240,6 +241,7 @@
 		912BBD441BF62D34004B7939 /* VIEWS */ = {
 			isa = PBXGroup;
 			children = (
+				91CC75DF1BFBC462007AE3B9 /* EventView.swift */,
 				914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */,
 				912AD72D1BCADDEB00A62255 /* GameScene.swift */,
 				916006271BF91DCF00FC076F /* VehicleCollectionViewCell.swift */,
@@ -369,7 +371,6 @@
 				912AD7331BCADDEC00A62255 /* Main.storyboard in Resources */,
 				9112E0881BEF096700905F58 /* EnvironmentList.plist in Resources */,
 				91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */,
-				913B5D831BF516B400A70E6A /* StartScreenScene.sks in Resources */,
 				912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +415,7 @@
 				913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */,
 				912BBD381BF5655F004B7939 /* MissionSelectViewController.swift in Sources */,
 				912BBD3E1BF57F52004B7939 /* MissionTableViewCell.swift in Sources */,
+				91CC75E01BFBC462007AE3B9 /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
