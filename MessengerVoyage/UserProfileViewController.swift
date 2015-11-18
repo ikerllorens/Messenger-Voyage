@@ -125,6 +125,7 @@ class UserProfileViewController: UIViewController {
     
     @IBAction func loadFromHealthKit(sender: UIButton) {
         healthManager.authorizeHealthKit()
+        self.errorFlag = false
         
         healthManager.updateHeight()
         healthManager.updateWeight()

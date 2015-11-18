@@ -24,9 +24,11 @@ class UserModel: NSObject {
     }
     
     func saveData() {
-        let saveArray = [userProfileBloodType, userProfileName, userProfileAge, userProfileHeight, userProfileWeight]
-        NSUserDefaults.standardUserDefaults().setObject(saveArray, forKey: "userProfile")
-        print("User Data Saved")
+        if(userProfileBloodType != nil && userProfileName != nil && userProfileAge != nil && userProfileHeight != nil && userProfileWeight != nil) {
+            let saveArray = [userProfileBloodType, userProfileName, userProfileAge, userProfileHeight, userProfileWeight]
+            NSUserDefaults.standardUserDefaults().setObject(saveArray, forKey: "userProfile")
+            print("User Data Saved")
+        }
     }
     
     func loadData() {
@@ -39,6 +41,7 @@ class UserModel: NSObject {
             print("User Data Loaded")
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("noUserProfileDetected", object: self)
+            print("Nouser")
         }
     }
     

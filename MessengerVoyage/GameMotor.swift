@@ -200,6 +200,8 @@ class GameMotor: NSObject {
             self.moveTablePosition()
             debugN++
         }
+        print(self.permutationTablePosition
+        )
         self.animationCycle++
         if(self.animationCycle >= 1000) {
             self.pauseTimer()

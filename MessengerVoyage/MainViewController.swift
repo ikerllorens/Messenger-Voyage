@@ -10,11 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var userProfile: UserModel!
+    var userProfile: UserModel = UserModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "forceProfile", name: "noUserProfileDetected",object: nil)
-        self.userProfile = UserModel()
+    
         // Do any additional setup after loading the view.
     }
 
