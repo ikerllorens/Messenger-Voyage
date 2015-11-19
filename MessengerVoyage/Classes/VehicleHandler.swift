@@ -11,7 +11,7 @@ import UIKit
 class VehicleHandler: NSObject {
     private var motor: GameMotor!
     private var name: String!
-    private var fuel: Double!
+    private var velocity: Double!
     
     init(motor: GameMotor, selectedVehicle: String) {
         super.init()
@@ -22,9 +22,10 @@ class VehicleHandler: NSObject {
         //Tomar un entorno aleatorio del plist y su arte
         let path = NSBundle.mainBundle().pathForResource("VehicleList", ofType: "plist")
         let currentVehicle = NSDictionary.init(contentsOfFile: path!)?.objectForKey(selectedVehicle) as! NSDictionary
-        self.fuel = currentVehicle.objectForKey("Fuel") as! Double
+        self.velocity = currentVehicle.objectForKey("Velocity") as! Double
         self.name = currentVehicle.objectForKey("Name") as! String
         let buffs = currentVehicle.objectForKey("Buffs") as! NSDictionary
+        self.motor.alterMotor("modifyMovementVelocity", value: self.velocity)
         for buff in buffs.allKeys {
             self.motor.alterMotor(buff as! String, value: buffs.objectForKey(buff) as! Double)
         }

@@ -5,6 +5,8 @@
 	<key>Easy</key>
 	<array>
 		<dict>
+			<key>MissionDistance</key>
+			<real>10000</real>
 			<key>Title</key>
 			<string>Pu</string>
 			<key>Description</key>

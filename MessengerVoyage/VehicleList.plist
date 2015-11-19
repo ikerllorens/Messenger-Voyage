@@ -6,42 +6,29 @@
 	<dict>
 		<key>Description</key>
 		<string>Template Description</string>
+		<key>Velocity</key>
+		<integer>1</integer>
 		<key>Art</key>
 		<string></string>
 		<key>Name</key>
 		<string>TemplateName</string>
-		<key>Fuel</key>
-		<integer>0</integer>
-		<key>Buffs</key>
-		<dict/>
-	</dict>
-	<key>Ultra Super Mega Tank</key>
-	<dict>
-		<key>Description</key>
-		<string></string>
-		<key>Art</key>
-		<string></string>
-		<key>Name</key>
-		<string>Ultra Super Mega Tank</string>
-		<key>Fuel</key>
-		<integer>0</integer>
 		<key>Buffs</key>
 		<dict/>
 	</dict>
 	<key>Bike of Doom</key>
 	<dict>
+		<key>Velocity</key>
+		<integer>1</integer>
 		<key>Description</key>
 		<string>🤕</string>
 		<key>Art</key>
 		<string></string>
 		<key>Name</key>
 		<string>Bike of Doom</string>
-		<key>Fuel</key>
-		<integer>0</integer>
 		<key>Buffs</key>
 		<dict>
 			<key>modifyNegativeEvents</key>
-			<real>0.5</real>
+			<integer>1</integer>
 			<key>modifyAttackProbability</key>
 			<real>1.1</real>
 		</dict>

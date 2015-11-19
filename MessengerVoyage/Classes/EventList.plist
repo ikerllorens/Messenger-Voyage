@@ -35,6 +35,73 @@
 				<key>SubEvents</key>
 				<array/>
 			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Secret path discovered!</string>
+				<key>Text</key>
+				<string>In the street there is a door A secret path that leads you to a mystery room and there is a sword, a bow and an axe inside. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Pick the sword</string>
+					<key>modifyAttackProbability</key>
+					<real>0.8</real>
+					<key>modifyMovementVelocity</key>
+					<real>0.8</real>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Pick the bow </string>
+					<key>modifyAttackProbability</key>
+					<real>0.9</real>
+					<key>modifyMovementVelocity</key>
+					<real>0.95</real>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Pick the axe</string>
+					<key>modifyMovementVelocity</key>
+					<real>0.78</real>
+					<key>modifyAttackProbability</key>
+					<real>0.78</real>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>You have found a lost letter</string>
+				<key>Text</key>
+				<string>You were walking down the street when suddenly you saw a letter on the floor, you recognize the address. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Keep the letter for myself. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Return the letter to the owner.</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Throw the letter away. </string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Read the letter. </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
 		</array>
 		<key>ClearWeather</key>
 		<array>
@@ -120,15 +187,11 @@
 				<dict>
 					<key>Text</key>
 					<string>OptionB</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionC</key>
 				<dict>
 					<key>Text</key>
 					<string>OptionC</string>
-					<key>Health</key>
-					<integer>0</integer>
 				</dict>
 				<key>OptionD</key>
 				<dict>

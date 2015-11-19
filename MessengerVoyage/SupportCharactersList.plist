@@ -64,7 +64,7 @@
 			<key>Buffs</key>
 			<dict>
 				<key>modifyDiscoveryProbability</key>
-				<real>1.4</real>
+				<integer>2</integer>
 			</dict>
 		</dict>
 	</dict>

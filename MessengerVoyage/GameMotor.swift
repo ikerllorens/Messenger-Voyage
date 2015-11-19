@@ -12,11 +12,12 @@ import Foundation
 class GameMotor: NSObject {
     //private var dayNightCicle: Float = 1.0
     private var distance: Double = 10000.0
+    private var velocity: Double = 1
     private var animationCycle: Int = 0
     private var permutationTable: [Double] = []
     private var permutationTablePosition: Int = 0
     private var temporalValues: Double = 0
-    private var baseTime: Double = 1
+    private var baseTime: Double = 0.01
     private var 🕑: NSTimer?
     
     //Si es mayor habra mas eventos, si es menor habra menos eventos
@@ -77,12 +78,18 @@ class GameMotor: NSObject {
         }
         let path = NSBundle.mainBundle().pathForResource("EventList", ofType: "plist")
         self.eventHandler = EventHandler(motor: self)
+        
         let missionParameters = parameters[0] as! NSDictionary
         self.environmentHandler = EnvironmentHandler(motor: self, startEnvironment: missionParameters.objectForKey("StartEnvironent") as! String)
         let modifiers = missionParameters.objectForKey("Modifiers") as! NSDictionary
         for modifier in modifiers.allKeys {
             alterMotor(modifier as! String, value: modifiers.objectForKey(modifier) as! Double)
         }
+        if let distanceTemp = missionParameters.objectForKey("MissionDistance") as? Double {
+            print("Distance", distanceTemp)
+            self.distance = distanceTemp
+        }
+        
         self.supportCharactersHandler = SupportCharactersHandler(selectedCharacters: parameters[2] as! NSDictionary, motor: self)
         /*
         * Importante: La lave del diccionario del plist debe ser igual al nombre del vehiculo
@@ -203,6 +210,13 @@ class GameMotor: NSObject {
             self.moveTablePosition()
             debugN++
         }
+        
+        if(self.distance <= 0) {
+            self.pauseTimer()
+        } else {
+            self.distance = self.distance - velocity
+        }
+        
         //print(self.permutationTablePosition)
         self.animationCycle++
         if(self.animationCycle >= 1000) {
@@ -231,7 +245,7 @@ class GameMotor: NSObject {
             }
             break
         case "modifyDiscoveryProbability":
-            print("attackDIscoveryModified", value)
+            print("discoveryProbabilityModified", value)
             if (self.probabilityDiscovery <= 100) {
                 self.probabilityDiscovery = self.probabilityDiscovery * value
             }
@@ -242,7 +256,10 @@ class GameMotor: NSObject {
                 self.probabilityClearWeather = self.probabilityClearWeather * value
             }
             break
-
+        case "modifyMovementVelocity":
+            print("VelocityModified", value)
+            self.velocity = self.velocity * value
+            break
         default:
             print("invalid parameter:", parameter)
             break

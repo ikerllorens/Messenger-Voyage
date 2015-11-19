@@ -84,10 +84,8 @@ class GameViewController: UIViewController {
     }
 
     @IBAction func selectDecission(sender: UILongPressGestureRecognizer) {
-        
         if (sender.state == UIGestureRecognizerState.Began) {
             if (sender.view == self.eventChoiceTextA) {
-                print("A")
                 NSNotificationCenter.defaultCenter().postNotificationName("eventDecissionMade", object: self, userInfo: self.currentShownEvent.objectForKey("OptionA") as? [NSObject: AnyObject])
                 self.eventView.hidden = true
             } else if (sender.view == self.eventChoiceTextB) {

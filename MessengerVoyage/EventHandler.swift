@@ -45,7 +45,7 @@ class EventHandler: NSObject {
                     if let valueModifier = effects.objectForKey(key) as? Double {
                         self.motor.alterMotor(key as! String, value: valueModifier)
                     } else {
-                        print("Invalid Modifier Value in event OptionSelected")
+                        print("Invalid Modifier Value in event OptionSelected", effects.objectForKey(key))
                     }
                 }
             }
