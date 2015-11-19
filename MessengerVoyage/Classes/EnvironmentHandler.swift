@@ -23,8 +23,10 @@ class EnvironmentHandler: NSObject {
         self.environmentMotorChanges()
     }
     
-    func changeEnvironment(userInfo: NSNotification) {
-        
+    func changeEnvironment(newEnvironment: String) {
+        let path = NSBundle.mainBundle().pathForResource("EnvironmentList", ofType: "plist")
+        self.currentEnvironment = NSDictionary.init(contentsOfFile: path!)?.objectForKey(newEnvironment) as! NSDictionary
+        self.environmentMotorChanges()
     }
     
     func environmentMotorChanges() {

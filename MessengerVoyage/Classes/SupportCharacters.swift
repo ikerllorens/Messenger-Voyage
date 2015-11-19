@@ -14,7 +14,7 @@ class SupportCharacters: NSObject {
     private var bloodType: Int!
     private var height: Double!
     private var weight: Double!
-    private var stamina: Double!
+    var stamina: Double!
     private var age: Double!
     private var name: String!
     var buffs: NSDictionary!

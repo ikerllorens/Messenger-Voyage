@@ -37,7 +37,6 @@ class EventHandler: NSObject {
     }
     
     func eventOptionSelected(notification: NSNotification) {
-        
          if let effects = notification.userInfo as NSDictionary! {
             let queueInmediateEffectsEvents = NSOperationQueue()
             queueInmediateEffectsEvents.addOperationWithBlock() {

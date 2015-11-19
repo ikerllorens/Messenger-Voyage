@@ -25,7 +25,18 @@ class SupportCharactersHandler: NSObject {
         }
     }
     
-    func reduceHealthBy(healthDecreas: Double) {
-        
+    func reduceHealthBy(healthDecrease: Double) {
+        for characterHealth in self.characters {
+            characterHealth.stamina = characterHealth.stamina - healthDecrease
+            if(characterHealth.stamina <= 0) {
+                
+            }
+        }
+    }
+    
+    func increaseHealthBy(healthIncrease: Double) {
+        for characterHealth in self.characters {
+            characterHealth.stamina = characterHealth.stamina + healthIncrease
+        }
     }
 }

@@ -16,8 +16,7 @@ class HealthManager: NSObject {
     private var weight: Double = -1
     private var height: Double = -1
     
-    func authorizeHealthKit() -> Bool
-    {
+    func authorizeHealthKit() -> Bool {
         let healthKitTypesToRead = Set(arrayLiteral: HKObjectType.characteristicTypeForIdentifier(HKCharacteristicTypeIdentifierBloodType)!,
             HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!,
             HKObjectType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!,
@@ -93,7 +92,6 @@ class HealthManager: NSObject {
             return -1
         }
     }
-
     
     func updateHeight () {
         let sampleType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)

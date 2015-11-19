@@ -76,6 +76,61 @@
 				<key>InmediateEffects</key>
 				<dict/>
 				<key>Title</key>
+				<string>Princess </string>
+				<key>Text</key>
+				<string>There is a princess living in one of the houses you deliver for, you found her.</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Give her a letter, and go away. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Steal her crown.</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask to be named lord</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Lost Emerald </string>
+				<key>Text</key>
+				<string>You have found the lost emerald, you can ask for a wish </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask for immortality</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask for the hidden grimoire </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask for superpowers </string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Decline the offer </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
 				<string>You have found a lost letter</string>
 				<key>Text</key>
 				<string>You were walking down the street when suddenly you saw a letter on the floor, you recognize the address. </string>
@@ -135,9 +190,84 @@
 				<key>SubEvents</key>
 				<array/>
 			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Sunshine</string>
+				<key>Text</key>
+				<string>The sun gave you superpowers only for today, choose your superpower</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose telekinesis</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose control of the elements of nature </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose healing</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>One rainbow has appeared</string>
+				<key>Text</key>
+				<string>During your shift in the neighborhood it started to rain and one rainbow appeared at the end of the street </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Continue walking. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Go to find the gold at the end of the rainbow. </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
 		</array>
 		<key>Merchant</key>
 		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplatePositiveMerch</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
 			<dict>
 				<key>InmediateEffects</key>
 				<dict/>

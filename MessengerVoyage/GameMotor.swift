@@ -260,6 +260,20 @@ class GameMotor: NSObject {
             print("VelocityModified", value)
             self.velocity = self.velocity * value
             break
+        case "reduceCharactersHealth":
+            print("CharacterHealth Reduced", value)
+            self.supportCharactersHandler.reduceHealthBy(value)
+            self.userInfo.userStamina = self.userInfo.userStamina - value
+            if (self.userInfo.userStamina <= 0) {
+                NSNotificationCenter.defaultCenter().postNotificationName("userHealthDepleted", object: self)
+                self.pauseTimer()
+            }
+            break
+        case "increaseCharactersHealth":
+            print("CharacterHealth Increased", value)
+            self.supportCharactersHandler.increaseHealthBy(value)
+            self.userInfo.userStamina = self.userInfo.userStamina - value
+            break
         default:
             print("invalid parameter:", parameter)
             break
@@ -275,7 +289,6 @@ class GameMotor: NSObject {
         print("A: ", debugEvA, " B: ", debugEvB, " C: ", debugEvC, " D: ", debugEvD)
         print("ProbBase: ", self.baseProbabilityEvent)
         self.animationCycle = 0
-        //self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true)
     }
     
     func continueTimer() {
