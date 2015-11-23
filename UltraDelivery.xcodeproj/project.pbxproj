@@ -23,11 +23,15 @@
 		912BBD3C1BF56BF3004B7939 /* MissionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD3B1BF56BF3004B7939 /* MissionList.plist */; };
 		912BBD3E1BF57F52004B7939 /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */; };
 		912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */; };
+		9133B4C51BFFF75B00B75E6F /* EventSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133B4C41BFFF75B00B75E6F /* EventSelection.swift */; };
 		913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B5DC41BF554FE00A70E6A /* MainViewController.swift */; };
 		914EBB0A1BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */; };
 		91530DF61BFA831300256506 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91530DF51BFA831300256506 /* UserProfileViewController.swift */; };
 		916006281BF91DCF00FC076F /* VehicleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916006271BF91DCF00FC076F /* VehicleCollectionViewCell.swift */; };
 		9160062A1BF936E800FC076F /* CharacterSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916006291BF936E800FC076F /* CharacterSelectViewController.swift */; };
+		917F60631C021993001F035C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F60621C021993001F035C /* HelpViewController.swift */; };
+		917F60651C021D0A001F035C /* Cute-Ball-Help-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 917F60641C021D0A001F035C /* Cute-Ball-Help-icon.png */; };
+		917F60671C022C22001F035C /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F60661C022C22001F035C /* EndGameViewController.swift */; };
 		9181346F1BF2C21000C33570 /* SupportCharactersHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */; };
 		918A0D941BFA391D00D68791 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A0D931BFA391D00D68791 /* UserModel.swift */; };
 		918A0D961BFA3BF800D68791 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918A0D951BFA3BF800D68791 /* HealthManager.swift */; };
@@ -82,12 +86,16 @@
 		912BBD3B1BF56BF3004B7939 /* MissionList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MissionList.plist; sourceTree = "<group>"; };
 		912BBD3D1BF57F52004B7939 /* MissionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
 		912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Very-Basic-Close-icon.png"; sourceTree = "<group>"; };
+		9133B4C41BFFF75B00B75E6F /* EventSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSelection.swift; sourceTree = "<group>"; };
 		913B5D821BF516B400A70E6A /* StartScreenScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScreenScene.sks; sourceTree = "<group>"; };
 		913B5DC41BF554FE00A70E6A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		91530DF51BFA831300256506 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		916006271BF91DCF00FC076F /* VehicleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCollectionViewCell.swift; sourceTree = "<group>"; };
 		916006291BF936E800FC076F /* CharacterSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterSelectViewController.swift; sourceTree = "<group>"; };
+		917F60621C021993001F035C /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		917F60641C021D0A001F035C /* Cute-Ball-Help-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cute-Ball-Help-icon.png"; sourceTree = "<group>"; };
+		917F60661C022C22001F035C /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
 		9181346E1BF2C21000C33570 /* SupportCharactersHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupportCharactersHandler.swift; path = Classes/SupportCharactersHandler.swift; sourceTree = "<group>"; };
 		918A0D931BFA391D00D68791 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		918A0D951BFA3BF800D68791 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
@@ -207,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				913B5D821BF516B400A70E6A /* StartScreenScene.sks */,
+				917F60641C021D0A001F035C /* Cute-Ball-Help-icon.png */,
 				912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */,
 				912BBD391BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg */,
 			);
@@ -231,9 +240,11 @@
 				91530DF51BFA831300256506 /* UserProfileViewController.swift */,
 				913B5DC41BF554FE00A70E6A /* MainViewController.swift */,
 				912AD72F1BCADDEC00A62255 /* GameViewController.swift */,
+				917F60661C022C22001F035C /* EndGameViewController.swift */,
 				912BBD371BF5655F004B7939 /* MissionSelectViewController.swift */,
 				912BBD351BF5629C004B7939 /* VehicleSelectViewController.swift */,
 				916006291BF936E800FC076F /* CharacterSelectViewController.swift */,
+				917F60621C021993001F035C /* HelpViewController.swift */,
 			);
 			name = CONTROLLERS;
 			sourceTree = "<group>";
@@ -241,6 +252,7 @@
 		912BBD441BF62D34004B7939 /* VIEWS */ = {
 			isa = PBXGroup;
 			children = (
+				9133B4C41BFFF75B00B75E6F /* EventSelection.swift */,
 				91CC75DF1BFBC462007AE3B9 /* EventView.swift */,
 				914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */,
 				912AD72D1BCADDEB00A62255 /* GameScene.swift */,
@@ -372,6 +384,7 @@
 				9112E0881BEF096700905F58 /* EnvironmentList.plist in Resources */,
 				91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */,
 				912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */,
+				917F60651C021D0A001F035C /* Cute-Ball-Help-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,8 +417,11 @@
 				91F992B71BF3CEE000D6C1B4 /* VehicleHandler.swift in Sources */,
 				916006281BF91DCF00FC076F /* VehicleCollectionViewCell.swift in Sources */,
 				91F318341BE9172D00066B44 /* EventHandler.swift in Sources */,
+				917F60671C022C22001F035C /* EndGameViewController.swift in Sources */,
 				91ABF5651BE0433300D3CCE2 /* EnvironmentHandler.swift in Sources */,
 				912AD7301BCADDEC00A62255 /* GameViewController.swift in Sources */,
+				9133B4C51BFFF75B00B75E6F /* EventSelection.swift in Sources */,
+				917F60631C021993001F035C /* HelpViewController.swift in Sources */,
 				918A0D941BFA391D00D68791 /* UserModel.swift in Sources */,
 				9181346F1BF2C21000C33570 /* SupportCharactersHandler.swift in Sources */,
 				912AD72A1BCADDEB00A62255 /* AppDelegate.swift in Sources */,

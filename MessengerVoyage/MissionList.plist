@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>MissionDistance</key>
-			<real>10000</real>
+			<integer>1000</integer>
 			<key>Title</key>
 			<string>Pu</string>
 			<key>Description</key>

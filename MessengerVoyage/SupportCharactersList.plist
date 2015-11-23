@@ -21,7 +21,7 @@
 			<key>Buffs</key>
 			<dict>
 				<key>modifyBaseProbability</key>
-				<real>3</real>
+				<real>1.1</real>
 			</dict>
 		</dict>
 		<key>Changuito Ojos Saltones</key>
@@ -111,8 +111,6 @@
 			<dict>
 				<key>modifyAttackProbability</key>
 				<real>1.6</real>
-				<key>modifyBaseProbability</key>
-				<integer>1</integer>
 			</dict>
 		</dict>
 	</dict>

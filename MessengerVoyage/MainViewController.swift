@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
     var userProfile: UserModel = UserModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "forceProfile", name: "noUserProfileDetected",object: nil)
     
         // Do any additional setup after loading the view.
     }
@@ -23,18 +22,25 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func forceProfile() {
-        //let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //let vc: UserProfileViewController = storyboard.instantiateViewControllerWithIdentifier("userProfileView") as! UserProfileViewController
-        
-        //self.presentViewController(vc, animated: true, completion: nil)
-    }
 //     MARK: - Navigation
 
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+        if let destination = segue.destinationViewController as? HelpViewController {
+            destination.tempText = "Blah Blah"
+        }
     }
     
-
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        self.userProfile = UserModel()
+        if (userProfile.userProfileName == nil && identifier == "toMissionSelection") {
+            let alertController = UIAlertController(title: "Error", message:
+                "Please create you profile before beginning a new game", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
 }

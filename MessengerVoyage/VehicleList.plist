@@ -7,7 +7,7 @@
 		<key>Description</key>
 		<string>Template Description</string>
 		<key>Velocity</key>
-		<integer>1</integer>
+		<integer>5</integer>
 		<key>Art</key>
 		<string></string>
 		<key>Name</key>
@@ -18,7 +18,7 @@
 	<key>Bike of Doom</key>
 	<dict>
 		<key>Velocity</key>
-		<integer>1</integer>
+		<integer>5</integer>
 		<key>Description</key>
 		<string>🤕</string>
 		<key>Art</key>
@@ -28,9 +28,11 @@
 		<key>Buffs</key>
 		<dict>
 			<key>modifyNegativeEvents</key>
-			<integer>1</integer>
+			<real>0.9</real>
 			<key>modifyAttackProbability</key>
-			<real>1.1</real>
+			<real>1.2</real>
+			<key>modifyFailureProbability</key>
+			<real>1.3</real>
 		</dict>
 	</dict>
 </dict>
