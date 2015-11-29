@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Discovery</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplatePositiveDiscovery</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Secret path discovered!</string>
+				<key>Text</key>
+				<string>In the street there is a door A secret path that leads you to a mystery room and there is a sword, a bow and an axe inside. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Pick the sword</string>
+					<key>modifyAttackProbability</key>
+					<real>0.8</real>
+					<key>modifyMovementVelocity</key>
+					<real>0.8</real>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Pick the bow </string>
+					<key>modifyAttackProbability</key>
+					<real>0.9</real>
+					<key>modifyMovementVelocity</key>
+					<real>0.95</real>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Pick the axe</string>
+					<key>modifyMovementVelocity</key>
+					<real>0.78</real>
+					<key>modifyAttackProbability</key>
+					<real>0.78</real>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Princess </string>
+				<key>Text</key>
+				<string>There is a princess living in one of the houses you deliver for, you found her.</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Give her a letter, and go away. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Steal her crown.</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask to be named lord</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Lost Emerald </string>
+				<key>Text</key>
+				<string>You have found the lost emerald, you can ask for a wish </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask for immortality</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask for the hidden grimoire </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask for superpowers </string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Decline the offer </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>You have found a lost letter</string>
+				<key>Text</key>
+				<string>You were walking down the street when suddenly you saw a letter on the floor, you recognize the address. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Keep the letter for myself. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Return the letter to the owner.</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Throw the letter away. </string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Read the letter. </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+		<key>ClearWeather</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplatePositiveWeather</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Sunshine</string>
+				<key>Text</key>
+				<string>The sun gave you superpowers only for today, choose your superpower</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose telekinesis</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose control of the elements of nature </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose healing</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>One rainbow has appeared</string>
+				<key>Text</key>
+				<string>During your shift in the neighborhood it started to rain and one rainbow appeared at the end of the street </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Continue walking. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Go to find the gold at the end of the rainbow. </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+		<key>Merchant</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplatePositiveMerch</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Hungry </string>
+				<key>Text</key>
+				<string>It has been a rough day, you are hungry but you only can afford the food but no the drink.</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Negociate with the merchant and offer some of your items. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Flirt with someone so she/he will buy you a drink.</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>The lock </string>
+				<key>Text</key>
+				<string>There are three doors locked, you need to buy a key so will open one of the houses.</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose the golden key to open the house of the king. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose the silver key to open the house of the business man.</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose the bronze key to open the house of the princess</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Choose the ruby key to open the house of the fairy </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>The ice cream cart is on the street. </string>
+				<key>Text</key>
+				<string>There is a new flavor of ice cream that the kids on the street talk about. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask the ice cream man about the ingredients.</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Buy one ice cream. </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Steal the ice cream from a boy </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+		<key>WildCardPos</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplatePositiveWild</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Gifts</string>
+				<key>Text</key>
+				<string>A couple on the street were fighting, at the end of the fight you got on golden ring and a box of chocolates, enjoy! </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ok</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Bycicle </string>
+				<key>Text</key>
+				<string>A boy received a new bicycle and he decided to give you the old one, is pretty good</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ok!</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Lucky you </string>
+				<key>Text</key>
+				<string>You were walking and the witch of the street gives you a potion to transform you into a wolf</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ok</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>Attack</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplateNegativeAttack</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>The dog </string>
+				<key>Text</key>
+				<string>One of the dogs of the neighborhood has escaped from his house and is running to catch you </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Run away</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Try to give him some food to persude him  </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Fight him </string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Try to frigten him</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Kidnap </string>
+				<key>Text</key>
+				<string>During your shift the ice cream man tries to kidnap a kid&apos;s puppy</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Fight with the ice cream man. </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Steal the ice cream cart. </string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Help the ice cream man. </string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Meh!</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+		<key>Failure</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplateNegativeFailure</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Broken GPS</string>
+				<key>Text</key>
+				<string>By some reason the lady of the directions is dead...</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Praise the gods for her to revive</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Blood transfusion</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Wait for her to revive</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>Let her go</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Broken wheel</string>
+				<key>Text</key>
+				<string>A wheel of your vehicle broke</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OK!</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+		<key>BadWeather</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplateNegativeBadWeather</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Noah</string>
+				<key>Text</key>
+				<string>It started raining, a deluge is coming, the whole street is an ocean and you have a letter for Noah, and you saw the ark. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ask the gods for mercy</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Find a pigeon to do the job.</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Swim and wait for the best</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Tornado </string>
+				<key>Text</key>
+				<string>The weather report announced a tornado alert </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Go to find Dorothy and Toto, and deliver them a letter </string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>Try to pass through the tornado</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>Find refuge. </string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+		<key>WildCardNeg</key>
+		<array>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>TemplateNegativeWildCardNeg</string>
+				<key>Text</key>
+				<string>Event </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>New pants </string>
+				<key>Text</key>
+				<string>You rip your pants, when you bend to tie your shoelaces</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionA</string>
+				</dict>
+				<key>OptionB</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionB</string>
+				</dict>
+				<key>OptionC</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionC</string>
+				</dict>
+				<key>OptionD</key>
+				<dict>
+					<key>Text</key>
+					<string>OptionD</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Stairs </string>
+				<key>Text</key>
+				<string>You have passed down a stair, that is bad luck. Give away one of your items. </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ok</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Bad boy </string>
+				<key>Text</key>
+				<string>One kid decided to throw his ice cream inside your bag, now you have lost time cleaning it.  </string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ok</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>InmediateEffects</key>
+				<dict/>
+				<key>Title</key>
+				<string>Mailbox</string>
+				<key>Text</key>
+				<string>Accidentally you broke a mailbox, you&apos;re forced to repair it</string>
+				<key>OptionA</key>
+				<dict>
+					<key>Text</key>
+					<string>Ok</string>
+				</dict>
+				<key>SubEvents</key>
+				<array/>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

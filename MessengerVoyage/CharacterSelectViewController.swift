@@ -29,6 +29,7 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.vehicleInfoView.hidden = true
         self.ReadyButton.hidden = true
         vehicleCollection.reloadData()
@@ -53,6 +54,13 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
         // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        let alertController = UIAlertController(title: "Select Characters", message:
+            "Please select 4 characters, press the image to know more details and select them.", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -176,9 +184,14 @@ class CharacterSelectViewController: UIViewController, UICollectionViewDelegate 
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         //self.gameSelections.append(currentSelectedVehicleInfo)
-        let characterDict = ["Character1": self.currentSelectedCharacters[0], "Character2": self.currentSelectedCharacters[1],"Character3": self.currentSelectedCharacters[2],"Character4": self.currentSelectedCharacters[3]]
-        self.gameSelections.append(characterDict)
-        (segue.destinationViewController as! GameViewController).initGame = self.gameSelections
+        if let destination = segue.destinationViewController as? HelpViewController {
+            destination.tempText = "You must select four characters for your journey, each character has modifiers to the game and will affect the game in different ways. Their class says a lot about them and the modifiers they use"
+        }
+        if let _ = segue.destinationViewController as? GameViewController {
+            let characterDict = ["Character1": self.currentSelectedCharacters[0], "Character2": self.currentSelectedCharacters[1],"Character3": self.currentSelectedCharacters[2],"Character4": self.currentSelectedCharacters[3]]
+            self.gameSelections.append(characterDict)
+            (segue.destinationViewController as! GameViewController).initGame = self.gameSelections
+        }
     }
 
 }

@@ -113,6 +113,8 @@ class GameMotor: NSObject {
         if(self.permutationTable[permutationTablePosition] < self.baseProbabilityEvent) {
             //Sucedio Evento
             self.🕑?.invalidate()
+            self.🕑?.invalidate()
+            self.🕑 = nil
             //let queue = NSOperationQueue()
             //queue.addOperationWithBlock() {
             self.moveTablePosition()
@@ -220,11 +222,6 @@ class GameMotor: NSObject {
             self.distance = self.distance - velocity
         }
         
-        //print(self.permutationTablePosition)
-        //        self.animationCycle++
-        //        if(self.animationCycle >= 1000) {
-        //            self.pauseTimer()
-        //        }
     }
     
     func alterMotor(parameter: String, value: Double) {
@@ -253,6 +250,12 @@ class GameMotor: NSObject {
                 self.probabilityFailure = self.probabilityFailure * value
             }
             break
+        case "modifyBadWeatherProbability":
+            print("badWeatherProbabilityModified", value)
+            if (self.probabilityBadWeather <= 100) {
+                self.probabilityBadWeather = self.probabilityBadWeather * value
+            }
+            break
         case "modifyDiscoveryProbability":
             print("discoveryProbabilityModified", value)
             if (self.probabilityDiscovery <= 100) {
@@ -274,7 +277,7 @@ class GameMotor: NSObject {
             self.supportCharactersHandler.reduceHealthBy(value)
             self.userInfo.userStamina = self.userInfo.userStamina - value
             if (self.userInfo.userStamina <= 0) {
-                NSNotificationCenter.defaultCenter().postNotificationName("userHealthDepleted", object: self)
+                NSNotificationCenter.defaultCenter().postNotificationName("gameEnded", object: self, userInfo: ["reason":"dead"])
                 self.pauseTimer()
             }
             break
@@ -299,7 +302,7 @@ class GameMotor: NSObject {
         print("ProbBase: ", self.baseProbabilityEvent)
         self.animationCycle = 0
         
-        NSNotificationCenter.defaultCenter().postNotificationName("gameEnded", object: self)
+        NSNotificationCenter.defaultCenter().postNotificationName("gameEnded", object: self, userInfo: ["reason":"arrived"])
     }
     
     func progressPercentage() -> Double {
@@ -307,7 +310,9 @@ class GameMotor: NSObject {
     }
     
     func continueTimer() {
-        self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true)
+        if (self.🕑 == nil) {
+            self.🕑 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(self.baseTime), target: self, selector: Selector("pickEvent"), userInfo: nil, repeats: true)
+        }
     }
     
     private func moveTablePosition() {

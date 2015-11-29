@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     let userProfile = UserModel()
     var currentShownEvent: NSDictionary!
     
+    @IBOutlet weak var vehicleJourney: UIImageView!
     @IBOutlet weak var progressView: UIProgressView!
     private var linkView: CADisplayLink!
     private var touchInit: NSDate!
@@ -42,10 +43,21 @@ class GameViewController: UIViewController {
         initGame.append(userProfile)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventHappened:", name: "positiveEventOcurred", object: motor)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "eventHappened:", name: "negativeEventOcurred", object: motor)
-        self.motor = GameMotor(parameters: initGame)
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "endGame:", name: "gameEnded", object: motor)
         self.motor = GameMotor(parameters: initGame)
+        self.vehicleJourney.image = UIImage(named: self.motor.vehicleHandler.currentVehicle.objectForKey("Art") as! String)
+        
+        self.eventChoiceTextA.layer.borderColor = UIColor.orangeColor().CGColor
+        self.eventChoiceTextB.layer.borderColor = UIColor.orangeColor().CGColor
+        self.eventChoiceTextC.layer.borderColor = UIColor.orangeColor().CGColor
+        self.eventChoiceTextD.layer.borderColor = UIColor.orangeColor().CGColor
+        
+        self.eventChoiceTextA.layer.borderWidth = 2
+        self.eventChoiceTextB.layer.borderWidth = 2
+        self.eventChoiceTextC.layer.borderWidth = 2
+        self.eventChoiceTextD.layer.borderWidth = 2
+        
+        //self.vehicleJourney.center.x = 0
         self.progressView.progress = 0
         🕧 = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(0.1), target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
         
@@ -59,36 +71,37 @@ class GameViewController: UIViewController {
     func eventHappened(notification: NSNotification) {
         self.eventView.hidden = false
         let data = notification.userInfo as NSDictionary!
-        dispatch_async(dispatch_get_main_queue(), {
-            self.eventTitleLabel.text = data.objectForKey("Title") as? String
-            self.eventTextField.text = data.objectForKey("Text") as? String
-            self.currentShownEvent = data
-            
-            if let optionADict = data.objectForKey("OptionA") as? NSDictionary {
-                self.eventChoiceA.hidden = false
-                self.eventChoiceTextA.text = optionADict.objectForKey("Text") as! String
-            } else {
-                self.eventChoiceA.hidden = true
-            }
-            if let optionBDict = data.objectForKey("OptionB") as? NSDictionary {
-                self.eventChoiceB.hidden = false
-                self.eventChoiceTextB.text = optionBDict.objectForKey("Text") as! String
-            } else {
-                self.eventChoiceB.hidden = true
-            }
-            if let optionCDict = data.objectForKey("OptionC") as? NSDictionary {
-                self.eventChoiceC.hidden = false
-                self.eventChoiceTextC.text = optionCDict.objectForKey("Text") as! String
-            } else {
-                self.eventChoiceC.hidden = true
-            }
-            if let optionDDict = data.objectForKey("OptionD") as? NSDictionary {
-                self.eventChoiceD.hidden = false
-                self.eventChoiceTextD.text = optionDDict.objectForKey("Text") as! String
-            } else {
-                self.eventChoiceD.hidden = true
-            }
-        })
+        //        dispatch_async(dispatch_get_main_queue(), {
+        self.eventTitleLabel.text = data.objectForKey("Title") as? String
+        self.eventTextField.text = data.objectForKey("Text") as? String
+        self.currentShownEvent = data
+        
+        
+        if let optionADict = data.objectForKey("OptionA") as? NSDictionary {
+            self.eventChoiceA.hidden = false
+            self.eventChoiceTextA.text = optionADict.objectForKey("Text") as! String
+        } else {
+            self.eventChoiceA.hidden = true
+        }
+        if let optionBDict = data.objectForKey("OptionB") as? NSDictionary {
+            self.eventChoiceB.hidden = false
+            self.eventChoiceTextB.text = optionBDict.objectForKey("Text") as! String
+        } else {
+            self.eventChoiceB.hidden = true
+        }
+        if let optionCDict = data.objectForKey("OptionC") as? NSDictionary {
+            self.eventChoiceC.hidden = false
+            self.eventChoiceTextC.text = optionCDict.objectForKey("Text") as! String
+        } else {
+            self.eventChoiceC.hidden = true
+        }
+        if let optionDDict = data.objectForKey("OptionD") as? NSDictionary {
+            self.eventChoiceD.hidden = false
+            self.eventChoiceTextD.text = optionDDict.objectForKey("Text") as! String
+        } else {
+            self.eventChoiceD.hidden = true
+        }
+        //        })
         
         
         // Ventana de evento
@@ -102,7 +115,6 @@ class GameViewController: UIViewController {
             linkView.frameInterval = 1
             linkView.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         } else if (sender.state == UIGestureRecognizerState.Ended) {
-            print("Ended")
             self.linkView.invalidate()
             (sender.view as! EventSelection).returnNormalState()
         } else if (sender.state == UIGestureRecognizerState.Cancelled) {
@@ -147,12 +159,20 @@ class GameViewController: UIViewController {
     
     func updateProgress() {
         self.progressView.progress = Float(self.motor.progressPercentage())
+        self.vehicleJourney.center.x = CGFloat(self.motor.progressPercentage()) * self.view.frame.width
+        self.vehicleJourney.center.y = self.view.frame.height - CGFloat(60)
     }
     
     func endGame(notif: NSNotification) {
         let storyBoardName = "Main"
         let storyboard = UIStoryboard(name: storyBoardName, bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("MissionEnded")
+        let vc = storyboard.instantiateViewControllerWithIdentifier("MissionEnded") as! EndGameViewController
+        if (notif.userInfo!["reason"] as! String == "dead") {
+            vc.textResume = "Your character died!!! Be careful with the decissions you make, each of them has consequences"
+        } else if (notif.userInfo!["reason"] as! String == "arrived") {
+            vc.textResume = "Congratulations! you arrived at your destination and delivered your package! The central bureocracy will be satisfied... For today"
+        }
+        
         self.presentViewController(vc, animated: true, completion: nil)
         self.🕧.invalidate()
     }

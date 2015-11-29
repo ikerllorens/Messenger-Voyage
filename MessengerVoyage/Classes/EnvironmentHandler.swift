@@ -31,13 +31,13 @@ class EnvironmentHandler: NSObject {
     
     func environmentMotorChanges() {
         if let modifiers = currentEnvironment.objectForKey("Modifiers") as? NSDictionary {
-            let queueEnvironment = NSOperationQueue()
-            queueEnvironment.addOperationWithBlock() {
-                for modifier in modifiers.allKeys {
-                    let modifierVal = modifiers.objectForKey(modifier) as! Double
-                    self.motor.alterMotor(modifier as! String, value: modifierVal)
-                }
+            //            let queueEnvironment = NSOperationQueue()
+            //            queueEnvironment.addOperationWithBlock() {
+            for modifier in modifiers.allKeys {
+                let modifierVal = modifiers.objectForKey(modifier) as! Double
+                self.motor.alterMotor(modifier as! String, value: modifierVal)
             }
+            //            }
         }
     }
 }

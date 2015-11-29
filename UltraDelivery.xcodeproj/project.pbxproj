@@ -25,6 +25,15 @@
 		912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */; };
 		9133B4C51BFFF75B00B75E6F /* EventSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133B4C41BFFF75B00B75E6F /* EventSelection.swift */; };
 		913B5DC51BF554FE00A70E6A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913B5DC41BF554FE00A70E6A /* MainViewController.swift */; };
+		914BD21A1C0AA6DD008C8600 /* tank.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2131C0AA6DD008C8600 /* tank.png */; };
+		914BD21B1C0AA6DD008C8600 /* moped.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2141C0AA6DD008C8600 /* moped.png */; };
+		914BD21C1C0AA6DD008C8600 /* desert-L3.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2151C0AA6DD008C8600 /* desert-L3.png */; };
+		914BD21D1C0AA6DD008C8600 /* desert-L2.psd in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2161C0AA6DD008C8600 /* desert-L2.psd */; };
+		914BD21E1C0AA6DD008C8600 /* desert-L1.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2171C0AA6DD008C8600 /* desert-L1.png */; };
+		914BD21F1C0AA6DD008C8600 /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2181C0AA6DD008C8600 /* start.png */; };
+		914BD2201C0AA6DD008C8600 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2191C0AA6DD008C8600 /* profile.png */; };
+		914BD2221C0AA8C0008C8600 /* Captura de pantalla 2015-11-28 a las 21.28.29.png in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2211C0AA8C0008C8600 /* Captura de pantalla 2015-11-28 a las 21.28.29.png */; };
+		914BD2261C0AAF55008C8600 /* EventListBckp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 914BD2251C0AAF55008C8600 /* EventListBckp.plist */; };
 		914EBB0A1BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */; };
 		91530DF61BFA831300256506 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91530DF51BFA831300256506 /* UserProfileViewController.swift */; };
 		916006281BF91DCF00FC076F /* VehicleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916006271BF91DCF00FC076F /* VehicleCollectionViewCell.swift */; };
@@ -89,6 +98,15 @@
 		9133B4C41BFFF75B00B75E6F /* EventSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSelection.swift; sourceTree = "<group>"; };
 		913B5D821BF516B400A70E6A /* StartScreenScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StartScreenScene.sks; sourceTree = "<group>"; };
 		913B5DC41BF554FE00A70E6A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		914BD2131C0AA6DD008C8600 /* tank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tank.png; sourceTree = "<group>"; };
+		914BD2141C0AA6DD008C8600 /* moped.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moped.png; sourceTree = "<group>"; };
+		914BD2151C0AA6DD008C8600 /* desert-L3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "desert-L3.png"; sourceTree = "<group>"; };
+		914BD2161C0AA6DD008C8600 /* desert-L2.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = "desert-L2.psd"; sourceTree = "<group>"; };
+		914BD2171C0AA6DD008C8600 /* desert-L1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "desert-L1.png"; sourceTree = "<group>"; };
+		914BD2181C0AA6DD008C8600 /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
+		914BD2191C0AA6DD008C8600 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		914BD2211C0AA8C0008C8600 /* Captura de pantalla 2015-11-28 a las 21.28.29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Captura de pantalla 2015-11-28 a las 21.28.29.png"; sourceTree = "<group>"; };
+		914BD2251C0AAF55008C8600 /* EventListBckp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = EventListBckp.plist; path = Classes/EventListBckp.plist; sourceTree = "<group>"; };
 		914EBB091BF9642600375FC8 /* CharacterHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		91530DF51BFA831300256506 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		916006271BF91DCF00FC076F /* VehicleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -214,6 +232,14 @@
 		912BBD411BF62C92004B7939 /* ASSETS */ = {
 			isa = PBXGroup;
 			children = (
+				914BD2131C0AA6DD008C8600 /* tank.png */,
+				914BD2141C0AA6DD008C8600 /* moped.png */,
+				914BD2151C0AA6DD008C8600 /* desert-L3.png */,
+				914BD2161C0AA6DD008C8600 /* desert-L2.psd */,
+				914BD2211C0AA8C0008C8600 /* Captura de pantalla 2015-11-28 a las 21.28.29.png */,
+				914BD2171C0AA6DD008C8600 /* desert-L1.png */,
+				914BD2181C0AA6DD008C8600 /* start.png */,
+				914BD2191C0AA6DD008C8600 /* profile.png */,
 				913B5D821BF516B400A70E6A /* StartScreenScene.sks */,
 				917F60641C021D0A001F035C /* Cute-Ball-Help-icon.png */,
 				912BBD451BF64939004B7939 /* Very-Basic-Close-icon.png */,
@@ -229,6 +255,7 @@
 				91A22C2B1BF29B1A00760496 /* SupportCharactersList.plist */,
 				9112E0871BEF096700905F58 /* EnvironmentList.plist */,
 				91ABF5641BE0433300D3CCE2 /* EventList.plist */,
+				914BD2251C0AAF55008C8600 /* EventListBckp.plist */,
 				912BBD3B1BF56BF3004B7939 /* MissionList.plist */,
 			);
 			name = GAME_PLISTS;
@@ -375,12 +402,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				912BBD3A1BF567E0004B7939 /* night_work_in_the_garage_art_street_rod_hot_ultra_3840x2160_hd-wallpaper-1794855.jpg in Resources */,
+				914BD21F1C0AA6DD008C8600 /* start.png in Resources */,
+				914BD21E1C0AA6DD008C8600 /* desert-L1.png in Resources */,
 				912AD7381BCADDEC00A62255 /* LaunchScreen.storyboard in Resources */,
 				91F992B51BF3CD5A00D6C1B4 /* VehicleList.plist in Resources */,
+				914BD2221C0AA8C0008C8600 /* Captura de pantalla 2015-11-28 a las 21.28.29.png in Resources */,
+				914BD21B1C0AA6DD008C8600 /* moped.png in Resources */,
 				912AD7351BCADDEC00A62255 /* Assets.xcassets in Resources */,
 				91A22C2C1BF29B1A00760496 /* SupportCharactersList.plist in Resources */,
+				914BD21A1C0AA6DD008C8600 /* tank.png in Resources */,
+				914BD21C1C0AA6DD008C8600 /* desert-L3.png in Resources */,
+				914BD2261C0AAF55008C8600 /* EventListBckp.plist in Resources */,
 				912BBD3C1BF56BF3004B7939 /* MissionList.plist in Resources */,
+				914BD21D1C0AA6DD008C8600 /* desert-L2.psd in Resources */,
 				912AD7331BCADDEC00A62255 /* Main.storyboard in Resources */,
+				914BD2201C0AA6DD008C8600 /* profile.png in Resources */,
 				9112E0881BEF096700905F58 /* EnvironmentList.plist in Resources */,
 				91ABF5671BE0433300D3CCE2 /* EventList.plist in Resources */,
 				912BBD461BF64939004B7939 /* Very-Basic-Close-icon.png in Resources */,

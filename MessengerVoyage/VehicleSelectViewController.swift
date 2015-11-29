@@ -29,6 +29,13 @@ class VehicleSelectViewController: UIViewController, UICollectionViewDelegate {
         }
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        let alertController = UIAlertController(title: "Select Vehicle", message:
+            "Please select a vehicle, press the image to know more details and select it", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,7 +70,8 @@ class VehicleSelectViewController: UIViewController, UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> VehicleCollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("vehicleCell", forIndexPath: indexPath) as! VehicleCollectionViewCell
-        let vehicle = self.vehicleList[indexPath.row] 
+        let vehicle = self.vehicleList[indexPath.row]
+        cell.vehicleImage.image = UIImage(named: vehicle.objectForKey("Art") as! String)
         cell.vehicleName.text = vehicle.objectForKey("Name") as? String
         cell.vehicleInfo = vehicle
         return cell
@@ -75,8 +83,13 @@ class VehicleSelectViewController: UIViewController, UICollectionViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        self.gameSelections.append(currentSelectedVehicleInfo)
-        (segue.destinationViewController as! CharacterSelectViewController).gameSelections = self.gameSelections
+        if let _ = segue.destinationViewController as? CharacterSelectViewController {
+            self.gameSelections.append(currentSelectedVehicleInfo)
+            (segue.destinationViewController as! CharacterSelectViewController).gameSelections = self.gameSelections
+        }
+        if let destination = segue.destinationViewController as? HelpViewController {
+            destination.tempText = "You must select a vehicle. Each vehicle has a velocity and will modify the events in the game"
+        }
         
     }
 

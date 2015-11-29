@@ -8,11 +8,9 @@
 			<key>MissionDistance</key>
 			<integer>1000</integer>
 			<key>Title</key>
-			<string>Pu</string>
+			<string>Desert Run</string>
 			<key>Description</key>
-			<string>Mission Description
-Ultra Classified:
-You must go to the other side of the planet</string>
+			<string>When the desert calls... The wild side calls... To run away... However we get paid for it</string>
 			<key>StartEnvironent</key>
 			<string>Desert</string>
 			<key>Modifiers</key>
@@ -23,10 +21,58 @@ You must go to the other side of the planet</string>
 		</dict>
 	</array>
 	<key>Medium</key>
-	<array/>
+	<array>
+		<dict>
+			<key>MissionDistance</key>
+			<integer>1000</integer>
+			<key>Title</key>
+			<string>Desert Run</string>
+			<key>Description</key>
+			<string>When the desert calls... The wild side calls... To run away... However we get paid for it</string>
+			<key>StartEnvironent</key>
+			<string>Desert</string>
+			<key>Modifiers</key>
+			<dict>
+				<key>modifyNegativeEvents</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+	</array>
 	<key>Hard</key>
-	<array/>
+	<array>
+		<dict>
+			<key>MissionDistance</key>
+			<integer>1000</integer>
+			<key>Title</key>
+			<string>Desert Run</string>
+			<key>Description</key>
+			<string>When the desert calls... The wild side calls... To run away... However we get paid for it</string>
+			<key>StartEnvironent</key>
+			<string>Desert</string>
+			<key>Modifiers</key>
+			<dict>
+				<key>modifyNegativeEvents</key>
+				<real>0.9</real>
+			</dict>
+		</dict>
+	</array>
 	<key>Insane</key>
-	<array/>
+	<array>
+		<dict>
+			<key>MissionDistance</key>
+			<integer>1000</integer>
+			<key>Title</key>
+			<string>Desert Run</string>
+			<key>Description</key>
+			<string>When the desert calls... The wild side calls... To run away... However we get paid for it</string>
+			<key>StartEnvironent</key>
+			<string>Desert</string>
+			<key>Modifiers</key>
+			<dict>
+				<key>modifyNegativeEvents</key>
+				<real>0.8</real>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -26,28 +26,28 @@ class EventHandler: NSObject {
         self.currentEvent = data
         
         if let inmediatteEffs: NSDictionary = self.currentEvent.objectForKey("InmediateEffects") as? NSDictionary {
-            let queueInmediateEffectsEvents = NSOperationQueue()
-            queueInmediateEffectsEvents.addOperationWithBlock() {
-                for key in Array(inmediatteEffs.allKeys) {
-                    print(self.currentEvent.objectForKey("Title"))
-                    self.motor.alterMotor(key as! String, value: inmediatteEffs.objectForKey(key) as! Double)
-                }
+            //            let queueInmediateEffectsEvents = NSOperationQueue()
+            //            queueInmediateEffectsEvents.addOperationWithBlock() {
+            for key in Array(inmediatteEffs.allKeys) {
+                //print(self.currentEvent.objectForKey("Title"))
+                self.motor.alterMotor(key as! String, value: inmediatteEffs.objectForKey(key) as! Double)
             }
+            //            }
         }
     }
     
     func eventOptionSelected(notification: NSNotification) {
-         if let effects = notification.userInfo as NSDictionary! {
-            let queueInmediateEffectsEvents = NSOperationQueue()
-            queueInmediateEffectsEvents.addOperationWithBlock() {
-                for key in Array(effects.allKeys) {
-                    if let valueModifier = effects.objectForKey(key) as? Double {
-                        self.motor.alterMotor(key as! String, value: valueModifier)
-                    } else {
-                        print("Invalid Modifier Value in event OptionSelected", effects.objectForKey(key))
-                    }
+        if let effects = notification.userInfo as NSDictionary! {
+            //            let queueInmediateEffectsEvents = NSOperationQueue()
+            //            queueInmediateEffectsEvents.addOperationWithBlock() {
+            for key in Array(effects.allKeys) {
+                if let valueModifier = effects.objectForKey(key) as? Double {
+                    self.motor.alterMotor(key as! String, value: valueModifier)
+                } else {
+                    print("Invalid Modifier Value in event OptionSelected", key)
                 }
             }
+            //            }
         }
     }
 }

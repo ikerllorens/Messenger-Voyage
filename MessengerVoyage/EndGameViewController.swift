@@ -11,10 +11,11 @@ import UIKit
 class EndGameViewController: UIViewController {
 
     @IBOutlet weak var endResume: UILabel!
+    var textResume: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.endResume.text = self.textResume
         // Do any additional setup after loading the view.
     }
 

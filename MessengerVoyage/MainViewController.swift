@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
 //     In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destination = segue.destinationViewController as? HelpViewController {
-            destination.tempText = "Blah Blah"
+            destination.tempText = "To play you must choose the requiered options that will be presented, also you must complete your profile, we use Health Kit to calculate the Stamina of your character in-game. In the game when an event appears you must press and hold the decission you choose. Remember each decission has consequences so decide carefully"
         }
     }
     

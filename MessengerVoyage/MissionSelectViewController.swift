@@ -46,6 +46,12 @@ class MissionSelectViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        let alertController = UIAlertController(title: "Select Mission", message:
+            "Select a mission. Press the detail button to get a description", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Ok!", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // Return the number of sections.
@@ -110,6 +116,10 @@ class MissionSelectViewController: UIViewController {
             var gameInfo: Array<AnyObject> = []
             gameInfo.append(selectedCell.cellInfo)
             (segue.destinationViewController as! VehicleSelectViewController).gameSelections = gameInfo
+        }
+        
+        if let destination = segue.destinationViewController as? HelpViewController {
+            destination.tempText = "Select a mission, each mission will have a set of modifiers and a default terrain. Be careful of which one you choose"
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
